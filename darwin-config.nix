@@ -37,11 +37,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    # programs.fish.enable = true;
+  # programs.fish.enable = true;
 
-# system.stateVersion = 5;
-    
-    nixpkgs.hostPlatform = "aarch64-darwin";
+  # system.stateVersion = 5;
+
+  nixpkgs.hostPlatform = "aarch64-darwin";
 
   # hardware.bluetooth.enable = true;
   # services.blueman.enable = true;
@@ -155,10 +155,10 @@
 
 
   # environment.sessionVariables = {
-    # use buildx for docker-compose_2 :)
-    # https://stackoverflow.com/questions/59756123/use-buildx-build-linux-arm64-in-docker-compose-file
-    # COMPOSE_DOCKER_CLI_BUILD = "1";
-    # DOCKER_BUILDKIT = "1";
+  # use buildx for docker-compose_2 :)
+  # https://stackoverflow.com/questions/59756123/use-buildx-build-linux-arm64-in-docker-compose-file
+  # COMPOSE_DOCKER_CLI_BUILD = "1";
+  # DOCKER_BUILDKIT = "1";
   # };
 
   # Allow unfree packages
@@ -168,24 +168,24 @@
   environment.systemPackages = with pkgs; [
     nil
 
-fish
+    fish
 
-tmux
-neovim
-bat
+    tmux
+    neovim
+    bat
 
-#brewCasks.ghostty
-#brewCasks.trash
+    #brewCasks.ghostty
+    #brewCasks.trash
 
-cargo
-python3
+    cargo
+    python3
 
-go
+    go
 
 
-wget
+    wget
 
-nodejs
+    nodejs
     nodePackages."@angular/cli"
 
     # greetd
