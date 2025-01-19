@@ -196,7 +196,6 @@
     age
     cargo
 
-
     brightnessctl
     pamixer
     upower
