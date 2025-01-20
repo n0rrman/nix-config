@@ -15,13 +15,14 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, darwin, home-manager, ... }: {
+  outputs = { nixpkgs, darwin, home-manager, ... }: {
 
     darwinConfigurations.mbp14 = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
         ./hosts/mbp14/configuration.nix
-      ];
+        ./modules/system/homebrew.nix
+     ];
     };
 
     nixosConfigurations.zenbook = nixpkgs.lib.nixosSystem {
@@ -35,10 +36,10 @@
           home-manager.useUserPackages = true;
           home-manager.useGlobalPkgs = true;
           home-manager.users.norrman = { pkgs, ... }: {
-              imports = [
-               ./home-manager/nixos/home.nix
-               ./modules/home/waybar.nix
-              ];
+            imports = [
+              ./home-manager/nixos/home.nix
+              ./modules/home/waybar.nix
+            ];
           };
         }
       ];
