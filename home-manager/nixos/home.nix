@@ -3,7 +3,7 @@
 # let
 #   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz";
 # in
-{
+# {
   #   imports = [
   #     (import "${home-manager}/nixos")
   #   ];
@@ -22,9 +22,13 @@
 
   # home-manager.useUserPackages = true;
   # home-manager.useGlobalPkgs = true;
-  home-manager.users.norrman = { pkgs, ... }: {
-    home.packages = with pkgs;
-      [
+  # home-manager.users.norrman = 
+  # { pkgs, ... }: 
+  {
+home.username = "norrman";
+home.homeDirectory = "/home/norrman";
+
+    home.packages = with pkgs; [
         nerd-fonts.hack
         nerd-fonts.jetbrains-mono
         waybar
@@ -566,6 +570,8 @@ monitor=,preferred,auto,1
     # 	      '';
     #
     # };
-    home.stateVersion = "18.09";
-  };
+    home.stateVersion = "25.05";
+    
+    programs.home-manager.enable = true;
+  
 }
