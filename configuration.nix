@@ -134,12 +134,12 @@
   security.polkit.enable = true;
 
   # Install firefox.
-  programs.firefox.enable = true;
+  # programs.firefox.enable = true;
 
 
-  programs.tmux = {
-    enable = true;
-  };
+  # programs.tmux = {
+  #   enable = true;
+  # };
 
   virtualisation.docker.enable = true;
 
@@ -172,6 +172,9 @@
     neovim
     vim
 
+    firefox
+    tmux
+
     xdg-desktop-portal
 
     # starship
@@ -189,6 +192,7 @@
     gcc
 
     gnumake
+
 
     ghostty
 
