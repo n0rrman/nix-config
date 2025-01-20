@@ -38,6 +38,7 @@
 
       modules = [
         ./hosts/zenbook/configuration.nix
+        ./home-manager/nixos/home.nix
 
         home-manager.nixosModules.home-manager
         {

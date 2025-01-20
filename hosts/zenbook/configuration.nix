@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
       ./zenbook-ux3405m.nix
       # ./gnome.nix
-      ./home.nix
+      # ./home.nix
     ];
 
   # Bootloader
