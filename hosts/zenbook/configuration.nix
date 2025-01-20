@@ -165,6 +165,8 @@
   # Packages
   environment.systemPackages = with pkgs; [
 
+    gparted
+
     # greetd
     bat
 

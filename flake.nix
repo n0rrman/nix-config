@@ -29,7 +29,7 @@
     darwinConfigurations.mbp14 = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
-        ./darwin-config.nix
+        ./hosts/mbp14/configuration.nix
       ];
     };
 
@@ -37,7 +37,7 @@
       system = "x86_64-linux";
 
       modules = [
-        ./configuration.nix
+        ./hosts/zenbook/configuration.nix
 
         home-manager.nixosModules.home-manager
         {
