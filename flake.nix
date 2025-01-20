@@ -37,6 +37,7 @@
           home-manager.users.norrman = { pkgs, ... }: {
               imports = [
                ./home-manager/nixos/home.nix
+               ./modules/home/waybar.nix
               ];
           };
         }

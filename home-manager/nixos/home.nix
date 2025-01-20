@@ -1,12 +1,15 @@
 { config, pkgs, lib, ... }:
 
-# let
+# imports =
+# letk
 #   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz";
 # in
 # {
-  #   imports = [
-  #     (import "${home-manager}/nixos")
-  #   ];
+  {
+    # imports = [
+    #   # (import "${home-manager}/nixos")
+    #   ../../modules/home/waybar/waybar.nix
+    # ];
 
   # xdg = {
   # portal = {
@@ -24,14 +27,13 @@
   # home-manager.useGlobalPkgs = true;
   # home-manager.users.norrman = 
   # { pkgs, ... }: 
-  {
 home.username = "norrman";
 home.homeDirectory = "/home/norrman";
+
 
     home.packages = with pkgs; [
         nerd-fonts.hack
         nerd-fonts.jetbrains-mono
-        waybar
         # waybar
         wofi
         # greetd
