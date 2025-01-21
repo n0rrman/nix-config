@@ -6,10 +6,12 @@
       "messenger"
       "discord"
       "jagex"
+      "runelite"
       "battle-net"
       "curseforge"
     ];
-    cleanup = "uninstall";
+    onActivation.cleanup = "uninstall";
+    onActivation.upgrade = true;
     caskArgs.no_quarantine = true;
   };
 }
