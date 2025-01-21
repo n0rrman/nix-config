@@ -1,12 +1,4 @@
-{ pkgs, lib, ... }:
-
-{
-  # User
-  users.users.norrman = {
-    isNormalUser = true;
-    description = "norrman";
-    extraGroups = [ "docker" "networkmanager" "wheel" ];
-  };
+{ pkgs, lib, ... }: {
 
   # Network
   networking.hostName = "zenbook";
@@ -39,7 +31,6 @@
 
   # time sync
   systemd.timers.ntp.enable = true;
-
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -108,17 +99,11 @@
   # Packages
   environment.systemPackages = with pkgs; [
 
-
-    # dev 
-    neovim
-    vim
-    tmux
     ghostty
 
     # work
     bitwarden-desktop
 
-    nil
 
     # greetd
     bat
@@ -127,57 +112,38 @@
 
     xdg-desktop-portal
 
-    #nvim reqs
-    luarocks
-    lua51Packages.lua
-    python3
+
     unzip
     wget
-    clang
-    gcc
-    fzf
-    ripgrep
-    nodejs
-    gcc
 
     htop
-    gnumake
 
-
-
-    # nerdfonts
     age
-    cargo
 
 
-
-    git
-    postgresql_17
-    sqlite
 
 
     # docker
     docker
     docker-compose
     docker-buildx
-
     # kubernetes
     stern
     kubectx
     kubectl
-
-
+    # gcloud
     (pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ])
+# util
     jq
     jetbrains.idea-ultimate
+    postgresql_17
+    sqlite
 
 
     trashy
 
-    nodePackages."@angular/cli"
     qutebrowser
 
-    go
   ];
 
 

@@ -1,7 +1,4 @@
 { pkgs, ... }: {
-  home.username = "norrman";
-  home.homeDirectory = "/home/norrman";
-
 
   home.packages = with pkgs; [
     # Fonts

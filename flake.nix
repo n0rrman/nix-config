@@ -4,15 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    darwin = {
-      url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    darwin.url = "github:lnl7/nix-darwin";
+    darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { nixpkgs, darwin, home-manager, ... }: {
@@ -24,9 +20,25 @@
       # SYSTEM
       modules = [
 
-        ./hosts/mbp14/configuration.nix
-        ./modules/system/homebrew.nix
+        ./hosts/mbp14/system.nix # General system configs
+        ./hosts/mbp14/users.nix # Users config
+        ./modules/darwin/homebrew.nix # Homebrew
 
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.users.norrman = { pkgs, ... }: {
+            # HOME
+            imports = [
+
+              # General home configs
+              ./hosts/mbp14/home.nix
+
+              # Packages
+              ./modules/shared/dev.nix
+
+            ];
+          };
+        }
       ];
     };
 
@@ -38,38 +50,34 @@
       # SYSTEM
       modules = [
 
-        # General system configs
-        ./hosts/zenbook/configuration.nix
-
-        # UX3405M configs
-        ./hosts/zenbook/hardware-configuration.nix
-
-        # Laptop firmware
-        ./modules/system/nixos-laptop.nix
+        ./hosts/zenbook/system.nix # General system configs
+        ./hosts/zenbook/users.nix # Users config
+        ./hosts/zenbook/hardware-configuration.nix # UX3405M configs
+        ./modules/nixos/laptop.nix # Laptop firmware
 
         home-manager.nixosModules.home-manager
         {
-          home-manager = {
-            useUserPackages = true;
-            useGlobalPkgs = true;
-            users.norrman = { pkgs, ... }: {
-              ## HOME
-              imports = [
+          home-manager.users.norrman = { pkgs, ... }: {
+            # HOME
+            imports = [
 
-                # General home configs
-                ./home-manager/nixos.nix
+              # General home configs
+              ./hosts/zenbook/home.nix
 
-                # GUI
-                ./modules/home/waybar.nix
-                ./modules/home/wofi.nix
-                ./modules/home/hypr.nix
-                ./modules/home/mako.nix
+              # GUI
+              ./modules/nixos/waybar.nix
+              ./modules/nixos/wofi.nix
+              ./modules/nixos/hypr.nix
+              ./modules/nixos/mako.nix
 
-              ];
-            };
+              # Packages
+              ./modules/shared/dev.nix
+
+            ];
           };
         }
       ];
     };
+
   };
 }
