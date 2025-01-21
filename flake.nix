@@ -20,14 +20,14 @@
     ###  MBP14  ###
     darwinConfigurations.mbp14 = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
-    
+
       # SYSTEM
       modules = [
 
         ./hosts/mbp14/configuration.nix
         ./modules/system/homebrew.nix
 
-     ];
+      ];
     };
 
 
@@ -57,13 +57,13 @@
               imports = [
 
                 # General home configs
-                ./home-manager/nixos/home.nix
                 ./home-manager/nixos.nix
 
                 # GUI
                 ./modules/home/waybar.nix
                 ./modules/home/wofi.nix
                 ./modules/home/hypr.nix
+                ./modules/home/mako.nix
 
               ];
             };
