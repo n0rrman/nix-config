@@ -17,33 +17,56 @@
 
   outputs = { nixpkgs, darwin, home-manager, ... }: {
 
+    ###  MBP14  ###
     darwinConfigurations.mbp14 = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
+    
+      # SYSTEM
       modules = [
+
         ./hosts/mbp14/configuration.nix
         ./modules/system/homebrew.nix
+
      ];
     };
 
+
+    ### ZENBOOK ###
     nixosConfigurations.zenbook = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
+      # SYSTEM
       modules = [
+
+        # General system configs
         ./hosts/zenbook/configuration.nix
+
+        # UX3405M configs
+        ./hosts/zenbook/hardware-configuration.nix
+
+        # Laptop firmware
+        ./modules/system/nixos-laptop.nix
 
         home-manager.nixosModules.home-manager
         {
-          home-manager.useUserPackages = true;
-          home-manager.useGlobalPkgs = true;
-          home-manager.users.norrman = { pkgs, ... }: {
-            imports = [
-              ./home-manager/nixos/home.nix
-              ./modules/home/waybar.nix
-            ];
+          home-manager = {
+            useUserPackages = true;
+            useGlobalPkgs = true;
+            users.norrman = { pkgs, ... }: {
+              ## HOME
+              imports = [
+
+                # General home configs
+                ./home-manager/nixos/home.nix
+
+                # GUI
+                ./modules/home/waybar.nix
+
+              ];
+            };
           };
         }
       ];
     };
-
   };
 }
