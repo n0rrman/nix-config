@@ -1,10 +1,4 @@
-{ config, pkgs, lib, ... }:
-
-{
-  home.username = "norrman";
-  home.homeDirectory = "/Users/norrman";
-
-
+{ config, pkgs, lib, ... }: {
 
   home.packages = with pkgs; [
     discord

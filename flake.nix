@@ -58,10 +58,12 @@
 
                 # General home configs
                 ./home-manager/nixos/home.nix
+                ./home-manager/nixos.nix
 
                 # GUI
                 ./modules/home/waybar.nix
                 ./modules/home/wofi.nix
+                ./modules/home/hypr.nix
 
               ];
             };
