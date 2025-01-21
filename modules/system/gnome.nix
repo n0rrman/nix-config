@@ -8,5 +8,4 @@
   services.gnome.localsearch.enable = false;
   environment.gnome.excludePackages = [ pkgs.gnome-tour ];
   services.xserver.excludePackages = [ pkgs.xterm ];
-  programs.waybar.enable = true;
 }

@@ -35,7 +35,7 @@ home.homeDirectory = "/home/norrman";
         nerd-fonts.hack
         nerd-fonts.jetbrains-mono
         # waybar
-        wofi
+        # wofi
         # greetd
         # swaylock
         #  swayidle

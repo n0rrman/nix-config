@@ -61,6 +61,7 @@
 
                 # GUI
                 ./modules/home/waybar.nix
+                ./modules/home/wofi.nix
 
               ];
             };

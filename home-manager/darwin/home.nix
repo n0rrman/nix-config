@@ -12,14 +12,12 @@
     # nerd-fonts.hack
     # nerd-fonts.jetbrains-mono
     # # waybar
-    # wofi
     # greetd
     # swaylock
     #  swayidle
     #  wl-clipboard
     # qt5
     # mako
-    #  wofi
     #  waybar
     #  grim
     # hyprlock
@@ -31,7 +29,6 @@
     #
     # anyrun
     #  wmenu
-    #  wofi
     #  neofetch
     # albert
     # walker
