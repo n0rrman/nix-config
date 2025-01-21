@@ -44,26 +44,26 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 
-# GTK support
+  # GTK support
   programs.dconf.enable = true;
 
 
-# Latest kernel
+  # Latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
 
-# System performance tweaks
+  # System performance tweaks
   boot.kernel.sysctl."fs.inotify.max_user_instances" = lib.mkForce 1024000;
   boot.kernel.sysctl."fs.inotify.max_user_watches" = lib.mkForce 1024000;
   boot.kernel.sysctl."fs.aio-max-nr" = 1048576;
-  boot.kernelParams = [];
+  boot.kernelParams = [ ];
 
 
 
-# Wayland support for Electron / Chrome apps
+  # Wayland support for Electron / Chrome apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-# greeted
+  # greeted
   services.greetd = {
     enable = true;
     settings = rec {
@@ -82,18 +82,18 @@
 
 
 
-# Shell
+  # Shell
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
 
-    
-# Privileges handler
+
+  # Privileges handler
   security.polkit.enable = true;
 
-# Dir env
+  # Dir env
   programs.direnv.enable = true;
 
-# Docker
+  # Docker
   environment.sessionVariables = {
     COMPOSE_DOCKER_CLI_BUILD = "1";
     DOCKER_BUILDKIT = "1";
@@ -118,7 +118,7 @@
     # work
     bitwarden-desktop
 
-  nil
+    nil
 
     # greetd
     bat
@@ -181,6 +181,6 @@
   ];
 
 
-  system.stateVersion = "unstable"; 
+  system.stateVersion = "unstable";
 
 }

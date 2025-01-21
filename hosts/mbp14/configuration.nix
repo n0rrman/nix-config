@@ -1,14 +1,14 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = [    ];
+  imports = [ ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
 
-    
+
 
   environment.systemPackages = with pkgs; [
     nil
@@ -21,7 +21,7 @@
     neovim
     bat
     cargo
-    
+
     python3
 
     go
@@ -32,5 +32,5 @@
     nodePackages."@angular/cli"
   ];
 
-  system.stateVersion = 5; 
+  system.stateVersion = 5;
 }

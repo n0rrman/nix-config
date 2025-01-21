@@ -2,9 +2,14 @@
   homebrew = {
     enable = true;
     casks = [
+      # Development
       "ghostty"
+
+      # Social
       "messenger"
       "discord"
+
+      # Game
       "jagex"
       "runelite"
       "battle-net"
