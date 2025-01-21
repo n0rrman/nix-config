@@ -3,9 +3,8 @@
 
     # Tools
     neovim
-    vim
     tmux
-    git
+    vim
     fzf
     ripgrep
 

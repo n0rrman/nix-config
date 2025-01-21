@@ -8,8 +8,6 @@
 
   environment.systemPackages = with pkgs; [
     trash-cli
-    bat
-    wget
   ];
 
   system.stateVersion = 5;

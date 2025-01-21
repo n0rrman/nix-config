@@ -23,6 +23,7 @@
         ./hosts/mbp14/system.nix # General system configs
         ./hosts/mbp14/users.nix # Users config
         ./modules/darwin/homebrew.nix # Homebrew
+        ./modules/shared/utility.nix # Utility packages
 
         home-manager.darwinModules.home-manager
         {
@@ -54,6 +55,7 @@
         ./hosts/zenbook/users.nix # Users config
         ./hosts/zenbook/hardware-configuration.nix # UX3405M configs
         ./modules/nixos/laptop.nix # Laptop firmware
+        ./modules/shared/utility.nix # Utility packages
 
         home-manager.nixosModules.home-manager
         {
@@ -72,6 +74,7 @@
 
               # Packages
               ./modules/shared/dev.nix
+              ./modules/shared/work.nix
 
             ];
           };

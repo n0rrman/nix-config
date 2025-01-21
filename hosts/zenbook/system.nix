@@ -33,6 +33,7 @@
   systemd.timers.ntp.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
 
   # GTK support
@@ -70,13 +71,9 @@
   # Configure console keymap
   console.keyMap = "sv-latin1";
 
-
-
-
   # Shell
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
-
 
   # Privileges handler
   security.polkit.enable = true;
@@ -84,66 +81,15 @@
   # Dir env
   programs.direnv.enable = true;
 
-  # Docker
-  environment.sessionVariables = {
-    COMPOSE_DOCKER_CLI_BUILD = "1";
-    DOCKER_BUILDKIT = "1";
-  };
-  virtualisation.docker.enable = true;
-  virtualisation.docker.extraOptions = "--default-ulimit nofile=1024000:1024000 --mtu=1340";
-
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Packages
   environment.systemPackages = with pkgs; [
-
     ghostty
-
-    # work
-    bitwarden-desktop
-
-
-    # greetd
-    bat
-
     firefox
 
     xdg-desktop-portal
 
-
-    unzip
-    wget
-
-    htop
-
-    age
-
-
-
-
-    # docker
-    docker
-    docker-compose
-    docker-buildx
-    # kubernetes
-    stern
-    kubectx
-    kubectl
-    # gcloud
-    (pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ])
-# util
-    jq
-    jetbrains.idea-ultimate
-    postgresql_17
-    sqlite
-
-
     trashy
-
-    qutebrowser
-
   ];
 
 
