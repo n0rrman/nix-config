@@ -1,15 +1,15 @@
 { pkgs, ... }: {
 
   # Docker config
-  home.sessionVariables = {
+  environment.sessionVariables = {
     COMPOSE_DOCKER_CLI_BUILD = "1";
     DOCKER_BUILDKIT = "1";
   };
+  virtualisation.docker.enable = true;
+  virtualisation.docker.extraOptions = "--default-ulimit nofile=1024000:1024000 --mtu=1340";
 
-  # virtualisation.docker.enable = true;
-  # virtualisation.docker.extraOptions = "--default-ulimit nofile=1024000:1024000 --mtu=1340";
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
 
     # Docker
     docker

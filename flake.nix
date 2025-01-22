@@ -56,6 +56,7 @@
         ./hosts/zenbook/hardware-configuration.nix # UX3405M configs
         ./modules/nixos/laptop.nix # Laptop firmware
         ./modules/shared/utility.nix # Utility packages
+        ./modules/shared/work.nix # Work packages
 
         home-manager.nixosModules.home-manager
         {
@@ -74,7 +75,6 @@
 
               # Packages
               ./modules/shared/dev.nix
-              ./modules/shared/work.nix
 
             ];
           };
