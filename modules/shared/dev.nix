@@ -14,7 +14,6 @@
     nodejs
     lua51Packages.lua
     nodePackages."@angular/cli"
-    python3
     cargo
     go
     gnumake
