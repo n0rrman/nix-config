@@ -67,7 +67,6 @@
     };
   };
 
-
   # Configure console keymap
   console.keyMap = "sv-latin1";
 
