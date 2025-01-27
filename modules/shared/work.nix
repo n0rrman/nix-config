@@ -30,6 +30,7 @@
     postgresql_17
     sqlite
     age
+    ollama
 
     # IDE
     jetbrains.idea-ultimate
