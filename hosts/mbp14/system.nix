@@ -8,7 +8,14 @@
 
   environment.systemPackages = with pkgs; [
     trash-cli
+
+    docker
+    docker-compose
+    colima
   ];
+
+  system.keyboard.enableKeyMapping = true;
+  system.keyboard.swapLeftCtrlAndFn = true;
 
   system.stateVersion = 5;
 }

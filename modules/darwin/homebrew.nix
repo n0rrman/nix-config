@@ -14,6 +14,9 @@
       "runelite"
       "battle-net"
       "curseforge"
+
+      # Browsers
+      "firefox"
     ];
     onActivation.cleanup = "uninstall";
     onActivation.upgrade = true;
