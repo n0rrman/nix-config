@@ -8,6 +8,9 @@
     fzf
     ripgrep
 
+    # Browsers
+    chromium
+
     # Languages
     luarocks
     nil
