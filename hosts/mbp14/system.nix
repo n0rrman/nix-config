@@ -15,7 +15,7 @@
   ];
 
   system.keyboard.enableKeyMapping = true;
-  system.keyboard.swapLeftCtrlAndFn = true;
+  # system.keyboard.swapLeftCtrlAndFn = true;
 
   system.stateVersion = 5;
 }

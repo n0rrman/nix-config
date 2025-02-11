@@ -18,6 +18,7 @@
     go
     gnumake
     gcc
+    postgresql
 
   ];
 }
