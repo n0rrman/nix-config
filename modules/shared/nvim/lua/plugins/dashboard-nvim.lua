@@ -32,10 +32,10 @@ return {
 					key = "o",
 				},
 				{
-					desc = " dotfiles",
+					desc = " nix",
 					group = "Variable",
-					action = "Telescope find_files hidden=true cwd=~/.dotfiles",
-					key = "d",
+					action = "Telescope find_files hidden=true cwd=~/.nix",
+					key = "n",
 				},
 			},
 			footer = {},
