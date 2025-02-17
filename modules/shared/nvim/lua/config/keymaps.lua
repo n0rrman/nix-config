@@ -7,12 +7,12 @@ local telescope = require("telescope.builtin")
 
 -- New keymap function
 local function keymap(input, output, desc, mode)
-    local opts = {
-        noremap = true,
-        silent = true,
-        desc = desc,
-    }
-    vim.keymap.set(mode or "n", input, output, opts)
+	local opts = {
+		noremap = true,
+		silent = true,
+		desc = desc,
+	}
+	vim.keymap.set(mode or "n", input, output, opts)
 end
 
 --
@@ -56,7 +56,7 @@ keymap("<leader>tm5", "<cmd>tabmove 5<cr>", "Tab management: Move tab to positio
 keymap("<S-h>", ":bprevious<CR>", "Previous buffer")
 keymap("<S-l>", ":bnext<CR>", "Next buffer")
 
--- Copy / paste: Leader -> c 
+-- Copy / paste: Leader -> c
 keymap("<leader>cy", '"+y', "Copy selection to clipboard", "v")
 keymap("<leader>cp", '"+p', "Paste from clipboard", "")
 
@@ -68,14 +68,12 @@ keymap("<leader>nt", ng.goto_template_for_component, "Ng: Go to template file")
 keymap("<leader>nc", ng.goto_component_with_template_file, "Ng: Go to component file")
 keymap("<leader>nT", ng.get_template_tcb, "Ng: Get template typecheck block")
 
-
 -- Git: Leader -> g
 keymap("<leader>gk", "<cmd>DiffviewOpen<cr>", "Diffview: Open diffview")
 keymap("<leader>gj", "<cmd>DiffviewClose<cr>", "Diffview: Close diffview")
 keymap("<leader>gb", "<cmd>Gitsigns blame<cr>", "Gitsigns: Show gitblame")
 keymap("<leader>gg", "<cmd>CopilotChatToggle<cr>", "Copilot: Open chat")
-vim.api.nvim_set_keymap('i', '<S-Tab>', "copilot#Accept('<CR>')", { expr = true, silent = true })
-
+vim.api.nvim_set_keymap("i", "<S-Tab>", "copilot#Accept('<CR>')", { expr = true, silent = true })
 
 -- Diagnostics: Leader -> a
 keymap("<leader>aa", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Diagnostic: Show actions")
@@ -96,10 +94,9 @@ keymap("<leader>fs", telescope.grep_string, "Telescope: Selected word")
 keymap("<leader>fp", telescope.registers, "Telescope: Registers")
 keymap("<leader>fo", ":ObsidianSearch<CR>", "Telescope: Search Telescope")
 
--- Obsidian: Leader -> o 
+-- Obsidian: Leader -> o
 keymap("<leader>od", ":ObsidianDailies -5 2<CR>", "Obsidian: Open Dailies")
 keymap("<leader>on", ":ObsidianNew<CR>", "Obsidian: New Note")
 keymap("<leader>os", ":ObsidianSearch<CR>", "Obsidian: Search")
 keymap("<leader>ot", ":ObsidianTags<CR>", "Obsidian: Tags")
 keymap("<leader>ow", ":ObsidianWorkspace<CR>", "Obsidian: Workspace")
-

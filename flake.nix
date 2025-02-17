@@ -37,6 +37,7 @@
 
               # Packages
               ./modules/shared/dev.nix
+              ./modules/shared/nvim.nix
 
             ];
           };
@@ -78,6 +79,7 @@
 
               # Packages
               ./modules/shared/dev.nix
+              ./modules/shared/nvim.nix
 
             ];
           };

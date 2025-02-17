@@ -4,11 +4,11 @@ return {
 	opts = {
 		theme = "hyper",
 		config = {
-            header = {
-                "",
-                "NVIM v" .. vim.version().major .. "." .. vim.version().minor .. "." .. vim.version().patch,
-                "",
-            },
+			header = {
+				"",
+				"NVIM v" .. vim.version().major .. "." .. vim.version().minor .. "." .. vim.version().patch,
+				"",
+			},
 			shortcut = {
 				{ desc = "󰊳 Update", group = "Special", action = "Lazy update", key = "u" },
 				{

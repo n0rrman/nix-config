@@ -5,11 +5,11 @@ return {
 		options = {
 			icons_enabled = true,
 			theme = "gruvbox-material",
-            -- Rounded
+			-- Rounded
 			-- section_separators = { left = " ", right = " " },
 			-- component_separators = { left = " ", right = "  " },
 			section_separators = { left = "", right = "" },
-            -- Square
+			-- Square
 			component_separators = { left = "|", right = "|" },
 			disabled_filetypes = {
 				statusline = {},
@@ -27,11 +27,11 @@ return {
 		},
 		sections = {
 			lualine_a = { { "mode", padding = 1 } },
-			lualine_b = { { "branch", padding = 2}, { "diff", padding = 1 } },
+			lualine_b = { { "branch", padding = 2 }, { "diff", padding = 1 } },
 			lualine_c = { {
 				"diagnostics",
 				sources = { "nvim_lsp" },
-                padding = 1
+				padding = 1,
 			} },
 			lualine_x = { { "encoding", padding = 2 }, { "filetype", padding = 2 } },
 			lualine_y = { { "location", padding = 1 } },
@@ -62,7 +62,7 @@ return {
 			},
 		},
 		winbar = {},
-		inactive_winbar = { },
+		inactive_winbar = {},
 		extensions = { "oil", "mason", "fzf" },
 	},
 }

@@ -1,10 +1,5 @@
 { pkgs, ... }: {
 
-
-  home.file.".config/nvim" = {
-    source = ./nvim;
-  };
-
   home.file.".config/ghostty" = {
     source = ./ghostty;
   };
@@ -24,7 +19,6 @@
   home.packages = with pkgs; [
 
     # Tools
-    neovim
     tmux
     vim
     fzf
@@ -32,7 +26,6 @@
 
     # Languages
     luarocks
-    nil
     nodejs
     lua51Packages.lua
     nodePackages."@angular/cli"
