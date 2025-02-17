@@ -17,8 +17,8 @@
     source = builtins.path { name = "tmux_config"; path = ./tmux/dot_tmux.conf; };
   };
 
-  home.file.".config/fish" = {
-    source = builtins.path { name = "fish_config"; path = ./fish; };
+  home.file.".config/fish/config.fish" = {
+    source = builtins.path { name = "fish_config"; path = ./fish/config.fish; };
   };
 
   home.packages = with pkgs; [
