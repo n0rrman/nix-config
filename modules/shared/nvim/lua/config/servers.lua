@@ -14,6 +14,7 @@ return {
 		graphql = { "prettierd", "prettier", stop_after_first = true },
 		lua = { "stylua" },
 		python = { "isort", "black" },
+		sql = { "pg_format" },
 		rust = { "rustfmt" },
 		nix = { "nixfmt" },
 		go = { "goimports" },
@@ -30,6 +31,7 @@ return {
 		lua = { "luacheck" },
 		make = { "checkmake" },
 		markdown = { "proselint" },
+		json = { "jsonlint" },
 	},
 
 	-- LSP --
@@ -48,6 +50,7 @@ return {
 		pyright = {}, -- Python
 		marksman = {}, -- Markdown
 		tailwindcss = {}, -- Tailwind CSS
+		sqls = {}, -- SQL/PostgreSQL
 		templ = {}, -- Go templating
 	},
 
@@ -71,8 +74,10 @@ return {
 		"fish",
 		"editorconfig",
 		"css",
+		"json",
 		"hyprlang",
 		"nginx",
 		"yaml",
+		"sql",
 	},
 }

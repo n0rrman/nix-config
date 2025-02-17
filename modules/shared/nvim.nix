@@ -23,6 +23,7 @@
     emmet-ls # emmet_ls
     tailwindcss-language-server # tailwind
     nodePackages.dockerfile-language-server-nodejs # dockerls
+    sqls # For SQL language server
 
     # Linters
     eslint_d # eslint_d
@@ -32,6 +33,7 @@
     hadolint # hadolint
     proselint # prose
     vale # vale
+    nodePackages.jsonlint # jsonlint
 
     # Formatters
     nodePackages.prettier-plugin-toml
@@ -43,5 +45,6 @@
     rustfmt # rustfmt
     nixfmt-rfc-style # nixfm
     gotools # goimports
+    pgformatter # pg_format
   ];
 }
