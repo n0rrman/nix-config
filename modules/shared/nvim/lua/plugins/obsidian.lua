@@ -27,5 +27,8 @@ return {
 		daily_notes = {
 			folder = "daily",
 		},
+		note_id_func = function()
+			return tostring(os.time())
+		end,
 	},
 }

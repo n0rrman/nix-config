@@ -31,6 +31,7 @@
     checkmake # checkmake
     hadolint # hadolint
     proselint # prose
+    vale # vale
 
     # Formatters
     nodePackages.prettier-plugin-toml

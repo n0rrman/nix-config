@@ -96,7 +96,7 @@ keymap("<leader>fo", ":ObsidianSearch<CR>", "Telescope: Search Telescope")
 
 -- Obsidian: Leader -> o
 keymap("<leader>od", ":ObsidianDailies -5 2<CR>", "Obsidian: Open Dailies")
-keymap("<leader>on", ":ObsidianNew<CR>", "Obsidian: New Note")
+keymap("<leader>on", ":ObsidianNewFromTemplate<CR>", "Obsidian: New Note (from template)")
 keymap("<leader>os", ":ObsidianSearch<CR>", "Obsidian: Search")
 keymap("<leader>ot", ":ObsidianTags<CR>", "Obsidian: Tags")
 keymap("<leader>ow", ":ObsidianWorkspace<CR>", "Obsidian: Workspace")

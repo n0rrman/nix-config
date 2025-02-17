@@ -29,7 +29,7 @@ return {
 		python = { "flake8" },
 		lua = { "luacheck" },
 		make = { "checkmake" },
-		["*"] = { "proselint" },
+		markdown = { "proselint" },
 	},
 
 	-- LSP --
