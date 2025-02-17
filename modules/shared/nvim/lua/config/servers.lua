@@ -29,7 +29,7 @@ return {
 		python = { "flake8" },
 		lua = { "luacheck" },
 		make = { "checkmake" },
-		["*"] = { "vale" },
+		["*"] = { "proselint" },
 	},
 
 	-- LSP --
@@ -40,7 +40,7 @@ return {
 		ts_ls = {}, -- TypeScript/JavaScript
 		cssls = {}, -- CSS
 		nil_ls = {}, -- Nix
-        dockerls = {}, -- Docker
+		dockerls = {}, -- Docker
 		gopls = {}, -- Go
 		rust_analyzer = {}, -- Rust
 		clangd = {}, -- C/C++
@@ -67,5 +67,12 @@ return {
 		"html",
 		"markdown",
 		"dockerfile",
+		"nix",
+		"fish",
+		"editorconfig",
+		"css",
+		"hyprlang",
+		"nginx",
+		"yaml",
 	},
 }

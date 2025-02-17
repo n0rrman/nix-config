@@ -22,7 +22,6 @@ vim.opt.incsearch = true -- Enable incremental searching.
 vim.opt.ignorecase = true -- Ignore case when searching.
 vim.opt.smartcase = true -- Overrides 'ignorecase' if uppercase.
 
-
 -- In your options.lua
 -- FOLDING
 vim.opt.foldmethod = "expr"
@@ -31,8 +30,8 @@ vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
 vim.opt.foldminlines = 1
 vim.opt.foldnestmax = 10
-vim.opt.foldtext = ''  
-vim.opt.foldcolumn = '0'
+vim.opt.foldtext = ""
+vim.opt.foldcolumn = "0"
 
 -- UI
 vim.opt.signcolumn = "yes" -- Reserve space in the gutter

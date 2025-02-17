@@ -30,11 +30,12 @@
     luajitPackages.luacheck # luacheck
     checkmake # checkmake
     hadolint # hadolint
-    vale # vale
+    proselint # prose
 
     # Formatters
     nodePackages.prettier-plugin-toml
     nodePackages.prettier # prettier
+    prettierd
     stylua # stylua
     python3Packages.black # black
     python3Packages.isort # isort
