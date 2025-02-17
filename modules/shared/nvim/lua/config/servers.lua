@@ -15,9 +15,8 @@ return {
 		lua = { "stylua" },
 		python = { "isort", "black" },
 		rust = { "rustfmt" },
-		nix = { "nixpkgs-fmt" },
+		nix = { "nixfmt" },
 		go = { "goimports" },
-		dockerfile = { "hadolint" },
 	},
 
 	-- LINTERS --
@@ -26,6 +25,7 @@ return {
 		typescript = { "eslint_d" },
 		javascriptreact = { "eslint_d" },
 		typescriptreact = { "eslint_d" },
+		dockerfile = { "hadolint" },
 		python = { "flake8" },
 		lua = { "luacheck" },
 		make = { "checkmake" },
@@ -40,6 +40,7 @@ return {
 		ts_ls = {}, -- TypeScript/JavaScript
 		cssls = {}, -- CSS
 		nil_ls = {}, -- Nix
+        dockerls = {}, -- Docker
 		gopls = {}, -- Go
 		rust_analyzer = {}, -- Rust
 		clangd = {}, -- C/C++
