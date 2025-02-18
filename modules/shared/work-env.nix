@@ -24,16 +24,5 @@
     # Google Cloud
     (pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ])
 
-    # Utility
-    jq
-    bitwarden-desktop
-    postgresql_17
-    sqlite
-    age
-    ollama
-
-    # IDE
-    jetbrains.idea-ultimate
-
   ];
 }
