@@ -26,6 +26,7 @@ return {
 		},
 		daily_notes = {
 			folder = "daily",
+            template = "template/default.md",
 		},
 		note_id_func = function()
 			return tostring(os.time())
