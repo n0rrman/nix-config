@@ -26,8 +26,9 @@ return {
 		},
 		daily_notes = {
 			folder = "daily",
-            template = "default.md",
+			template = "default.md",
 		},
+		notes_subdir = "quick",
 		note_id_func = function()
 			return tostring(os.time())
 		end,
