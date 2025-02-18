@@ -35,7 +35,7 @@ return {
 					desc = " nix",
 					group = "Variable",
 					action = "Telescope find_files hidden=true cwd=~/.nix",
-					key = "x",
+					key = "n",
 				},
 			},
 			footer = {},
