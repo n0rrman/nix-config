@@ -7,5 +7,6 @@
     unzip
     htop
     yazi
+    home-manager
   ];
 }
