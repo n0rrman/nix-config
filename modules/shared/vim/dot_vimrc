@@ -60,6 +60,7 @@ set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
 set nofixeol 
+set spellang=en_gb
 
 "" Searching
 set showmatch

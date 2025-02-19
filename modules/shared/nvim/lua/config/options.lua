@@ -6,6 +6,7 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
 vim.opt.mouse = ""
+vim.opt.spellang = "en_gb"
 
 -- INDENTATION
 vim.opt.autoindent = true -- Auto indent when starting a new line.
