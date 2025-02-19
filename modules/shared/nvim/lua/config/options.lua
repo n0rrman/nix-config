@@ -6,7 +6,6 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
 vim.opt.mouse = ""
-vim.opt.spellang = "en_gb"
 
 -- INDENTATION
 vim.opt.autoindent = true -- Auto indent when starting a new line.
@@ -104,3 +103,12 @@ vim.cmd([[
         au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200}) 
     augroup END 
 ]])
+
+-- Set spell check for markdown and txt files
+vim.opt.spelllang = "en_gb"
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"markdown", "text"},
+  callback = function()
+    vim.opt_local.spell = true
+  end,
+})

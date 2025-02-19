@@ -60,7 +60,6 @@ set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
 set nofixeol 
-set spellang=en_gb
 
 "" Searching
 set showmatch
@@ -91,3 +90,8 @@ set termguicolors
 set background=dark
 color slate
 
+
+"" Spell check for txt and md files
+set spelllang=en_gb
+autocmd FileType markdown setlocal spell
+autocmd FileType text setlocal spell
