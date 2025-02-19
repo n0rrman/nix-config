@@ -32,5 +32,10 @@ return {
 		note_id_func = function()
 			return tostring(os.time())
 		end,
+
+		---@param url string
+		follow_url_func = function(url)
+			vim.ui.open(url)
+		end,
 	},
 }
