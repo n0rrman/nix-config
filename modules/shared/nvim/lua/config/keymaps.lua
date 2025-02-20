@@ -17,6 +17,7 @@ end
 
 --
 -- GENERAL KEYMAPS --
+keymap("<F1>", "<Nop>", "Disable F1 help")
 --
 -- Window navigation: ctrl-[h,j,k,l]
 keymap("<C-h>", "<cmd>wincmd h<CR>", "Window navigation: Navigate to left window")

@@ -1,6 +1,7 @@
 "" Keybindings 
 set mouse=
 let mapleader = " "
+map <F1> <nop>
 
 " Buffer navigation
 nnoremap <S-h> :bprevious<CR>
