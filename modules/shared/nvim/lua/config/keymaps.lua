@@ -55,6 +55,7 @@ keymap("<leader>tm5", "<cmd>tabmove 5<cr>", "Tab management: Move tab to positio
 --
 keymap("<S-h>", ":bprevious<CR>", "Previous buffer")
 keymap("<S-l>", ":bnext<CR>", "Next buffer")
+keymap("<S-x>", ":bp | bd #<CR>", "Close current buffer and go back to prev")
 
 -- Copy / paste: Leader -> c
 keymap("<leader>cy", '"+y', "Copy selection to clipboard", "v")

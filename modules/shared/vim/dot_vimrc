@@ -5,6 +5,7 @@ let mapleader = " "
 " Buffer navigation
 nnoremap <S-h> :bprevious<CR>
 nnoremap <S-l> :bnext<CR>
+nnoremap <S-x> :bp<bar>bd #<CR>
 
 " Window arrangement: Leader->Ctrl-[h,j,k,l]
 nnoremap <C-h> <C-W>h      " Navigate to left window
