@@ -11,82 +11,92 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, darwin, home-manager, ... }: {
+  outputs =
+    {
+      nixpkgs,
+      darwin,
+      home-manager,
+      ...
+    }:
+    {
 
-    ###  MBP14  ###
-    darwinConfigurations.mbp14 = darwin.lib.darwinSystem {
-      system = "aarch64-darwin";
+      ###  MBP14  ###
+      darwinConfigurations.mbp14 = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
 
-      # SYSTEM
-      modules = [
+        # SYSTEM
+        modules = [
 
-        ./hosts/mbp14/system.nix # General system configs
-        ./hosts/mbp14/users.nix # Users config
+          ./hosts/mbp14/system.nix # General system configs
+          ./hosts/mbp14/users.nix # Users config
 
-        ./modules/darwin/homebrew.nix # Homebrew
-        ./modules/shared/utility.nix # Utility packages
+          ./modules/darwin/homebrew.nix # Homebrew
+          ./modules/shared/utility.nix # Utility packages
 
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.users.norrman = { pkgs, ... }: {
-            # HOME
-            imports = [
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.users.norrman =
+              { pkgs, ... }:
+              {
+                # HOME
+                imports = [
 
-              # General home configs
-              ./hosts/mbp14/home.nix
+                  # General home configs
+                  ./hosts/mbp14/home.nix
 
-              # Packages
-              ./modules/shared/dev.nix
-              ./modules/shared/nvim.nix
+                  # Packages
+                  ./modules/shared/dev.nix
+                  ./modules/shared/nvim.nix
 
-            ];
-          };
-        }
-      ];
+                ];
+              };
+          }
+        ];
+      };
+
+      ### ZENBOOK ###
+      nixosConfigurations.zenbook = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        # SYSTEM
+        modules = [
+
+          ./hosts/zenbook/system.nix # General system configs
+          ./hosts/zenbook/users.nix # Users config
+          ./hosts/zenbook/hardware-configuration.nix # UX3405M configs
+
+          ./modules/nixos/laptop.nix # Laptop firmware
+
+          ./modules/shared/utility.nix # Utility packages
+          ./modules/shared/work-env.nix # Work environment packages
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.users.norrman =
+              { pkgs, ... }:
+              {
+                # HOME
+                imports = [
+
+                  # General home configs
+                  ./hosts/zenbook/home.nix
+
+                  # GUI
+                  ./modules/nixos/waybar.nix
+                  ./modules/nixos/wofi.nix
+                  ./modules/nixos/hypr.nix
+                  ./modules/nixos/mako.nix
+
+                  # Packages
+                  ./modules/shared/dev.nix
+                  ./modules/shared/nvim.nix
+                  ./modules/shared/work-tools.nix
+
+                ];
+              };
+          }
+        ];
+      };
+
     };
-
-
-    ### ZENBOOK ###
-    nixosConfigurations.zenbook = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-
-      # SYSTEM
-      modules = [
-
-        ./hosts/zenbook/system.nix # General system configs
-        ./hosts/zenbook/users.nix # Users config
-        ./hosts/zenbook/hardware-configuration.nix # UX3405M configs
-
-        ./modules/nixos/laptop.nix # Laptop firmware
-
-        ./modules/shared/utility.nix # Utility packages
-        ./modules/shared/work-env.nix # Work environment packages
-
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.users.norrman = { pkgs, ... }: {
-            # HOME
-            imports = [
-
-              # General home configs
-              ./hosts/zenbook/home.nix
-
-              # GUI
-              ./modules/nixos/waybar.nix
-              ./modules/nixos/wofi.nix
-              ./modules/nixos/hypr.nix
-              ./modules/nixos/mako.nix
-
-              # Packages
-              ./modules/shared/dev.nix
-              ./modules/shared/nvim.nix
-              ./modules/shared/work-tools.nix
-
-            ];
-          };
-        }
-      ];
-    };
-
-  };
 }
