@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   homebrew = {
     enable = true;
     casks = [
@@ -14,6 +15,7 @@
       "runelite"
       "battle-net"
       "curseforge"
+      "steam"
 
       # Browsers
       "firefox"
