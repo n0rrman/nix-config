@@ -14,23 +14,17 @@ return {
 		local cmp = require("cmp")
 		cmp.setup({
 			preselect = cmp.PreselectMode.None,
-			experimental = {
-				ghost_text = true,
-			},
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
-                { name = "nvim_lsp_signature_help" },
+				{ name = "nvim_lsp_signature_help" },
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
 				["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
 			}),
-			completion = {
-				completeopt = "menu,menuone,noinsert",
-			},
 			snippet = {
 				expand = function(args)
 					require("luasnip").lsp_expand(args.body)
