@@ -23,6 +23,7 @@
     vim
     fzf
     ripgrep
+    age
 
     # Languages
     luarocks
