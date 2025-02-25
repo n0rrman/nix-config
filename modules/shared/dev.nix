@@ -24,6 +24,7 @@
     fzf
     ripgrep
     age
+    delta
 
     # Languages
     luarocks
