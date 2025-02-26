@@ -1,23 +1,24 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   environment.systemPackages = with pkgs; [
-      # Screen brightness control
-      brightnessctl
-  
-      # Audio control
-      pamixer
-  
-      # Laptop power managerment
-      upower
-  
-      # Temperature monitoring
-      lm_sensors
+    # Screen brightness control
+    brightnessctl
+
+    # Audio control
+    pamixer
+
+    # Laptop power managerment
+    upower
+
+    # Temperature monitoring
+    lm_sensors
   ];
 
   # Intel graphics
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [    
+    extraPackages = with pkgs; [
       # Hardware acceleration
       vaapiIntel
 
