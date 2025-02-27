@@ -23,12 +23,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "se";
-    variant = "mac";
-  };
-
   # time sync
   systemd.timers.ntp.enable = true;
 
