@@ -11,6 +11,13 @@
 
   environment.systemPackages = with pkgs; [
 
+    # IDE
+    jetbrains.idea-ultimate
+
+    # Utility
+    google-chrome
+    bitwarden-desktop
+
     # Docker
     docker
     docker-compose

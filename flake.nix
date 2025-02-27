@@ -68,7 +68,7 @@
           ./modules/nixos/laptop.nix # Laptop firmware
 
           ./modules/shared/utility.nix # Utility packages
-          ./modules/shared/work-env.nix # Work environment packages
+          ./modules/shared/work.nix # Work packages
 
           home-manager.nixosModules.home-manager
           {
@@ -90,7 +90,6 @@
                   # Packages
                   ./modules/shared/dev.nix
                   ./modules/shared/nvim.nix
-                  ./modules/shared/work-tools.nix
 
                 ];
               };
