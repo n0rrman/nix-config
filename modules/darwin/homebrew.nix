@@ -16,6 +16,9 @@
       "battle-net"
       "curseforge"
       "steam"
+
+      # Browser
+      "zen-browser"
     ];
     onActivation.cleanup = "uninstall";
     onActivation.upgrade = true;
