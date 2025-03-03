@@ -17,6 +17,8 @@
     # Utility
     google-chrome
     bitwarden-desktop
+    firefox
+    (callPackage ../../packages/zen.nix {})
 
     # Docker
     docker

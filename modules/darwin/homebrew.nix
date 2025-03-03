@@ -16,9 +16,6 @@
       "battle-net"
       "curseforge"
       "steam"
-
-      # Browsers
-      "firefox"
     ];
     onActivation.cleanup = "uninstall";
     onActivation.upgrade = true;

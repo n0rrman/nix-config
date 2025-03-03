@@ -78,7 +78,6 @@
   # Packages
   environment.systemPackages = with pkgs; [
     ghostty
-    firefox
 
     xdg-desktop-portal
 
