@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    hyprland
     hyprlock
     hypridle
     hyprpaper
@@ -13,9 +14,9 @@
     };
   };
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    package = pkgs.hyprland;
-    systemd.enable = true;
-  };
+  # wayland.windowManager.hyprland = {
+  #   enable = true;
+  #   # package = pkgs.hyprland;
+  #   # systemd.enable = true;
+  # };
 }
