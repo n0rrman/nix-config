@@ -5,6 +5,7 @@
     hyprlock
     hypridle
     hyprpaper
+    # hyprcursor
   ];
 
   home.file.".config/hypr" = {
