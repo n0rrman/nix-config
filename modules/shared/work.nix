@@ -18,6 +18,7 @@
     google-chrome
     bitwarden-desktop
     firefox
+    obsidian
     (callPackage ../../packages/zen.nix {})
 
     # Docker

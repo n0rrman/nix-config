@@ -8,8 +8,6 @@
     # Screenshot
     slurp
     grim
-
-    obsidian
   ];
 
   home.stateVersion = "25.05";
