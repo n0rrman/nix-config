@@ -84,8 +84,9 @@
                   # GUI
                   ./modules/nixos/waybar.nix
                   ./modules/nixos/wofi.nix
-                  ./modules/nixos/hypr.nix
                   ./modules/nixos/mako.nix
+                  ./modules/nixos/icons.nix
+                  ./modules/nixos/hypr.nix
 
                   # Packages
                   ./modules/shared/dev.nix
