@@ -86,15 +86,21 @@ vim.diagnostic.config({
 	},
 	signs = {
 		text = {
-			[vim.diagnostic.severity.ERROR] = "󰅚",
-			[vim.diagnostic.severity.WARN] = "󰀪",
+			[vim.diagnostic.severity.ERROR] = "●",
+			[vim.diagnostic.severity.WARN] = "●",
 			[vim.diagnostic.severity.INFO] = "●",
-			[vim.diagnostic.severity.HINT] = "󰌶",
+			[vim.diagnostic.severity.HINT] = "●",
 		},
 	},
 	underline = true,
 	severity_sort = true,
 })
+vim.cmd([[
+  highlight DiagnosticSignError guibg=NONE guifg=#fb4934
+  highlight DiagnosticSignWarn guibg=NONE guifg=#fabd2f
+  highlight DiagnosticSignInfo guibg=NONE guifg=#83a598
+  highlight DiagnosticSignHint guibg=NONE guifg=#8ec07c
+]])
 
 -- Highlight on yank
 vim.cmd([[ 
@@ -107,8 +113,8 @@ vim.cmd([[
 -- Set spell check for markdown and txt files
 vim.opt.spelllang = "en_gb"
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = {"markdown", "text"},
-  callback = function()
-    vim.opt_local.spell = true
-  end,
+	pattern = { "markdown", "text" },
+	callback = function()
+		vim.opt_local.spell = true
+	end,
 })
