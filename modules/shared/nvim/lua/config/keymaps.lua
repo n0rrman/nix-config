@@ -77,6 +77,9 @@ keymap("<leader>gb", "<cmd>Gitsigns blame<cr>", "Gitsigns: Show gitblame")
 keymap("<leader>gg", "<cmd>CopilotChatToggle<cr>", "Copilot: Open chat")
 vim.api.nvim_set_keymap("i", "<S-Tab>", "copilot#Accept('<CR>')", { expr = true, silent = true })
 
+-- DBUI: Leader -> d
+keymap("<leader>d", "<cmd>tab DBUI<cr>", "DBUI: Open DBUI")
+
 -- Diagnostics: Leader -> a
 keymap("<leader>aa", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Diagnostic: Show actions")
 keymap("<leader>ad", "<cmd>lua vim.diagnostic.open_float()<cr>", "Diagnostic: Show diagnostics")

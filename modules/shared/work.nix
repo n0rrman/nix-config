@@ -12,7 +12,8 @@
   environment.systemPackages = with pkgs; [
 
     # IDE
-    jetbrains.idea-ultimate
+    # jetbrains.idea-ultimate
+    # jetbrains-toolbox
 
     # Utility
     google-chrome

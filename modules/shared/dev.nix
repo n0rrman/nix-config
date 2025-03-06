@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   home.file.".config/ghostty" = {
     source = ./ghostty;
@@ -25,7 +26,7 @@
     ripgrep
     age
     delta
-    pgadmin4
+    pgadmin4-desktopmode
 
     # Languages
     luarocks
