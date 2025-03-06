@@ -28,11 +28,14 @@ return {
 		sections = {
 			lualine_a = { { "mode", padding = 1 } },
 			lualine_b = { { "branch", padding = 2 }, { "diff", padding = 1 } },
-			lualine_c = { {
-				"diagnostics",
-				sources = { "nvim_lsp" },
-				padding = 1,
-			} },
+			lualine_c = {
+				{
+					"diagnostics",
+					sources = { "nvim_lsp" },
+					padding = 1,
+				},
+				{ "filename", path = 1 },
+			},
 			lualine_x = { { "encoding", padding = 2 }, { "filetype", padding = 2 } },
 			lualine_y = { { "location", padding = 1 } },
 			lualine_z = { { "progress", padding = 2 } },
@@ -54,6 +57,8 @@ return {
 					use_mode_colors = true,
 				},
 			},
+			lualine_b = {},
+			lualine_c = {},
 			lualine_x = {
 				{
 					"filename",
