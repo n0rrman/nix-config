@@ -44,7 +44,7 @@ return {
 			lualine_a = {},
 			lualine_b = {},
 			lualine_c = { { "filename", path = 1 } },
-			lualine_x = { "filetype" },
+			lualine_x = { { "encoding", padding = 2 }, { "filetype", padding = 2 } },
 			lualine_y = {},
 			lualine_z = {},
 		},
