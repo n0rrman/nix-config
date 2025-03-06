@@ -25,6 +25,7 @@
     ripgrep
     age
     delta
+    pgadmin4
 
     # Languages
     luarocks
