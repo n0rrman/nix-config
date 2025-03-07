@@ -8,9 +8,9 @@ return {
 			-- Rounded
 			-- section_separators = { left = " ", right = " " },
 			-- component_separators = { left = " ", right = "  " },
+			-- Minimal
 			section_separators = { left = "", right = "" },
-			-- Square
-			component_separators = { left = "|", right = "|" },
+			component_separators = { left = "", right = "" },
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},
@@ -26,25 +26,45 @@ return {
 			},
 		},
 		sections = {
-			lualine_a = { { "mode", padding = 1 } },
+			lualine_a = {
+				{ "mode", padding = 1 },
+				{
+					function()
+						local recording_register = vim.fn.reg_recording()
+						if recording_register == "" then
+							return ""
+						else
+							return "(@" .. recording_register .. ") "
+						end
+					end,
+					padding = 0,
+				},
+			},
 			lualine_b = { { "branch", padding = 2 }, { "diff", padding = 1 } },
 			lualine_c = {
+				{ "filename", path = 1 },
 				{
 					"diagnostics",
 					sources = { "nvim_lsp" },
 					padding = 1,
 				},
-				{ "filename", path = 1 },
 			},
-			lualine_x = { { "encoding", padding = 2 }, { "filetype", padding = 2 } },
+			lualine_x = { { "fileformat" }, { "filesize", padding = 0 }, { "filetype", padding = 2 } },
 			lualine_y = { { "location", padding = 1 } },
 			lualine_z = { { "progress", padding = 2 } },
 		},
 		inactive_sections = {
 			lualine_a = {},
 			lualine_b = {},
-			lualine_c = { { "filename", path = 1 } },
-			lualine_x = { { "encoding", padding = 2 }, { "filetype", padding = 2 } },
+			lualine_c = {
+				{ "filename", path = 1 },
+				{
+					"diagnostics",
+					sources = { "nvim_lsp" },
+					padding = 1,
+				},
+			},
+			lualine_x = { { "fileformat" }, { "filesize", padding = 0 }, { "filetype", padding = 2 } },
 			lualine_y = {},
 			lualine_z = {},
 		},
@@ -52,17 +72,19 @@ return {
 			lualine_a = {
 				{
 					"tabs",
+					max_length = vim.o.columns,
+					show_modified_status = false,
 					mode = 2,
 					path = 0,
 					use_mode_colors = true,
 				},
 			},
 			lualine_b = {},
-			lualine_c = {},
 			lualine_x = {
 				{
-					"filename",
-					path = 3,
+					function()
+						return vim.bo.modified and "unsaved changes" or " "
+					end,
 				},
 			},
 		},

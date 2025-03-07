@@ -7,12 +7,14 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope-ui-select.nvim",
+			"debugloop/telescope-undo.nvim",
 			{
 				"nvim-telescope/telescope-fzf-native.nvim",
 				build = "make",
 				config = function()
 					require("telescope").load_extension("fzf")
 					require("telescope").load_extension("ui-select")
+					require("telescope").load_extension("undo")
 				end,
 			},
 		},

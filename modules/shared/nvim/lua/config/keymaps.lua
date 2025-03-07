@@ -40,6 +40,7 @@ keymap("<leader>l", "<C-W>>", "Window resize: Move window border right")
 -- Tab management: Leader->t...
 keymap("<leader>tn", "<cmd>tabnew<cr>", "Tab management: Create new tab")
 keymap("<leader>tc", "<cmd>tabclose<cr>", "Tab management: Close current tab")
+keymap("<leader>t,", ":LualineRenameTab ", "Tab management: Rename current tab")
 keymap("<leader>t1", "<cmd>tabnext 1<cr>", "Tab management: Go to tab 1")
 keymap("<leader>t2", "<cmd>tabnext 2<cr>", "Tab management: Go to tab 2")
 keymap("<leader>t3", "<cmd>tabnext 3<cr>", "Tab management: Go to tab 3")
@@ -78,7 +79,7 @@ keymap("<leader>gg", "<cmd>CopilotChatToggle<cr>", "Copilot: Open chat")
 vim.api.nvim_set_keymap("i", "<S-Tab>", "copilot#Accept('<CR>')", { expr = true, silent = true })
 
 -- DBUI: Leader -> d
-keymap("<leader>d", "<cmd>tab DBUI<cr>", "DBUI: Open DBUI")
+keymap("<leader>d", "<cmd>:tab DBUI<cr>", "DBUI: Open diffview")
 
 -- Diagnostics: Leader -> a
 keymap("<leader>aa", "<cmd>lua vim.lsp.buf.code_action()<cr>", "Diagnostic: Show actions")
@@ -97,6 +98,7 @@ keymap("gr", telescope.lsp_references, "Telescope: Function references")
 keymap("<leader>fk", telescope.keymaps, "Telescope: Nvim keymaps")
 keymap("<leader>fs", telescope.grep_string, "Telescope: Selected word")
 keymap("<leader>fp", telescope.registers, "Telescope: Registers")
+keymap("<leader>fu", ":Telescope undo<CR>", "Telescope: Undo")
 keymap("<leader>fo", ":ObsidianSearch<CR>", "Telescope: Search Telescope")
 
 -- Obsidian: Leader -> o
@@ -105,3 +107,4 @@ keymap("<leader>on", ":ObsidianNewFromTemplate<CR>", "Obsidian: New Note (from t
 keymap("<leader>os", ":ObsidianSearch<CR>", "Obsidian: Search")
 keymap("<leader>ot", ":ObsidianTags<CR>", "Obsidian: Tags")
 keymap("<leader>ow", ":ObsidianWorkspace<CR>", "Obsidian: Workspace")
+keymap("<leader>ob", ":ObsidianBacklink<CR>", "Obsidian: Backlinks")
