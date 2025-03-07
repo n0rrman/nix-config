@@ -18,6 +18,21 @@ return {
 				["x"] = { char = "", hl_group = "ObsidianDone" },
 			},
 		},
+
+		mappings = {
+			["<leader>ox"] = {
+				action = function()
+					return require("obsidian").util.toggle_checkbox()
+				end,
+				opts = { buffer = true },
+			},
+			["<cr>"] = {
+				action = function()
+					return require("obsidian").util.gf_passthrough()
+				end,
+				opts = { buffer = true, expr = true },
+			},
+		},
 		templates = {
 			folder = "template",
 			date_format = "%Y-%m-%d",
@@ -33,7 +48,6 @@ return {
 			return tostring(os.time())
 		end,
 
-		---@param url string
 		follow_url_func = function(url)
 			vim.ui.open(url)
 		end,
