@@ -15,11 +15,9 @@
     jetbrains.idea-ultimate
 
     # Utility
-    google-chrome
     bitwarden-desktop
-    firefox
     obsidian
-    (callPackage ../../packages/zen.nix {})
+    inputs.zen-browser.packages."x86_64-linux".default
 
     # Docker
     docker

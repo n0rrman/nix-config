@@ -9,6 +9,8 @@
 
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs =
@@ -17,7 +19,8 @@
       darwin,
       home-manager,
       ...
-    }:
+    }@inputs:
+
     {
 
       ###  MBP14  ###
@@ -56,11 +59,11 @@
 
       ### ZENBOOK ###
       nixosConfigurations.zenbook = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         system = "x86_64-linux";
 
         # SYSTEM
         modules = [
-
           ./hosts/zenbook/system.nix # General system configs
           ./hosts/zenbook/users.nix # Users config
           ./hosts/zenbook/hardware-configuration.nix # UX3405M configs

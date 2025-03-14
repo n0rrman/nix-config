@@ -1,4 +1,10 @@
-{ pkgs, lib, ... }: {
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
+{
 
   # Network
   networking.hostName = "zenbook";
@@ -26,25 +32,23 @@
   # time sync
   systemd.timers.ntp.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
-
 
   # GTK support
   programs.dconf.enable = true;
 
-
   # Latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
 
   # System performance tweaks
   boot.kernel.sysctl."fs.inotify.max_user_instances" = lib.mkForce 1024000;
   boot.kernel.sysctl."fs.inotify.max_user_watches" = lib.mkForce 1024000;
   boot.kernel.sysctl."fs.aio-max-nr" = 1048576;
   boot.kernelParams = [ ];
-
-
 
   # Wayland support for Electron / Chrome apps
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -74,7 +78,6 @@
   # Dir env
   programs.direnv.enable = true;
 
-
   # Packages
   environment.systemPackages = with pkgs; [
     ghostty
@@ -83,7 +86,6 @@
 
     trashy
   ];
-
 
   system.stateVersion = "25.05";
 
