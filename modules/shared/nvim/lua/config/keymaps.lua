@@ -51,7 +51,8 @@ keymap("<leader>t2", "<cmd>tabnext 2<cr>", "Tab management: Go to tab 2 (alt)")
 keymap("<leader>t3", "<cmd>tabnext 3<cr>", "Tab management: Go to tab 3 (alt)")
 keymap("<leader>t4", "<cmd>tabnext 4<cr>", "Tab management: Go to tab 4 (alt)")
 keymap("<leader>t5", "<cmd>tabnext 5<cr>", "Tab management: Go to tab 5 (alt)")
-
+keymap("<S-h>", ":tabprevious<CR>", "Previous tab")
+keymap("<S-l>", ":tabnext<CR>", "Next tab")
 keymap("<leader>tm1", "<cmd>tabmove 1<cr>", "Tab management: Move tab to position 1")
 keymap("<leader>tm2", "<cmd>tabmove 2<cr>", "Tab management: Move tab to position 2")
 keymap("<leader>tm3", "<cmd>tabmove 3<cr>", "Tab management: Move tab to position 3")
@@ -60,10 +61,6 @@ keymap("<leader>tm5", "<cmd>tabmove 5<cr>", "Tab management: Move tab to positio
 
 --
 -- PLUGIN KEYMAPS --
---
-keymap("<S-h>", ":bprevious<CR>", "Previous buffer")
-keymap("<S-l>", ":bnext<CR>", "Next buffer")
-keymap("<S-x>", ":bp | bd #<CR>", "Close current buffer and go back to prev")
 
 -- Copy / paste: Leader -> c
 keymap("<leader>cy", '"+y', "Copy selection to clipboard", "v")

@@ -3,11 +3,6 @@ set mouse=
 let mapleader = " "
 map <F1> <nop>
 
-" Buffer navigation
-nnoremap <S-h> :bprevious<CR>
-nnoremap <S-l> :bnext<CR>
-nnoremap <S-x> :bp<bar>bd #<CR>
-
 " Window arrangement: Leader->Ctrl-[h,j,k,l]
 nnoremap <C-h> <C-W>h      " Navigate to left window
 nnoremap <C-j> <C-W>j      " Navigate to lower window
@@ -39,6 +34,8 @@ nnoremap <leader>tm2 :tabmove 2<CR>   " Move tab to position 2
 nnoremap <leader>tm3 :tabmove 3<CR>   " Move tab to position 3
 nnoremap <leader>tm4 :tabmove 4<CR>   " Move tab to position 4
 nnoremap <leader>tm5 :tabmove 5<CR>   " Move tab to position 5
+nnoremap <S-h> :tabprevious<CR>
+nnoremap <S-l> :tabnext<CR>
 
 " Copy and paste to clipboard
 vnoremap <leader>cy "+y
