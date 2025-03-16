@@ -19,6 +19,7 @@
 
       # Browser
       "zen-browser"
+      "google-chrome"
     ];
     onActivation.cleanup = "uninstall";
     onActivation.upgrade = true;
