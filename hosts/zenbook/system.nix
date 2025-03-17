@@ -65,7 +65,7 @@
   };
 
   # Configure console keymap
-  console.keyMap = "sv-latin1";
+  console.keyMap = "us";
 
   # Shell
   programs.fish.enable = true;
