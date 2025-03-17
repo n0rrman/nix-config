@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }:
+{
 
   # Docker config
   environment.sessionVariables = {
@@ -8,7 +9,6 @@
   virtualisation.docker.enable = true;
   virtualisation.docker.extraOptions = "--default-ulimit nofile=1024000:1024000 --mtu=1340";
 
-
   environment.systemPackages = with pkgs; [
 
     # IDE
@@ -16,6 +16,7 @@
 
     # Utility
     bitwarden-desktop
+    google-chrome
     obsidian
     inputs.zen-browser.packages."x86_64-linux".default
 
@@ -30,7 +31,9 @@
     kubectl
 
     # Google Cloud
-    (pkgs.google-cloud-sdk.withExtraComponents [ pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin ])
+    (pkgs.google-cloud-sdk.withExtraComponents [
+      pkgs.google-cloud-sdk.components.gke-gcloud-auth-plugin
+    ])
 
   ];
 }
