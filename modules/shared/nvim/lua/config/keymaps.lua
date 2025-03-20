@@ -41,23 +41,27 @@ keymap("<leader>l", "<C-W>>", "Window resize: Move window border right")
 keymap("<leader>tn", "<cmd>tabnew<cr>", "Tab management: Create new tab")
 keymap("<leader>tx", "<cmd>tabclose<cr>", "Tab management: Close current tab")
 keymap("<leader>t,", ":LualineRenameTab ", "Tab management: Rename current tab")
-keymap("<leader>1", "<cmd>tabnext 1<cr>", "Tab management: Go to tab 1")
-keymap("<leader>2", "<cmd>tabnext 2<cr>", "Tab management: Go to tab 2")
-keymap("<leader>3", "<cmd>tabnext 3<cr>", "Tab management: Go to tab 3")
-keymap("<leader>4", "<cmd>tabnext 4<cr>", "Tab management: Go to tab 4")
-keymap("<leader>5", "<cmd>tabnext 5<cr>", "Tab management: Go to tab 5")
-keymap("<leader>t1", "<cmd>tabnext 1<cr>", "Tab management: Go to tab 1 (alt)")
-keymap("<leader>t2", "<cmd>tabnext 2<cr>", "Tab management: Go to tab 2 (alt)")
-keymap("<leader>t3", "<cmd>tabnext 3<cr>", "Tab management: Go to tab 3 (alt)")
-keymap("<leader>t4", "<cmd>tabnext 4<cr>", "Tab management: Go to tab 4 (alt)")
-keymap("<leader>t5", "<cmd>tabnext 5<cr>", "Tab management: Go to tab 5 (alt)")
-keymap("<S-h>", ":tabprevious<CR>", "Previous tab")
-keymap("<S-l>", ":tabnext<CR>", "Next tab")
-keymap("<leader>tm1", "<cmd>tabmove 1<cr>", "Tab management: Move tab to position 1")
-keymap("<leader>tm2", "<cmd>tabmove 2<cr>", "Tab management: Move tab to position 2")
-keymap("<leader>tm3", "<cmd>tabmove 3<cr>", "Tab management: Move tab to position 3")
-keymap("<leader>tm4", "<cmd>tabmove 4<cr>", "Tab management: Move tab to position 4")
-keymap("<leader>tm5", "<cmd>tabmove 5<cr>", "Tab management: Move tab to position 5")
+keymap("<S-h>", ":tabprevious<CR>", "Tab management: Previous tab")
+keymap("<S-l>", ":tabnext<CR>", "Tab management: Next tab")
+for i = 1, 9 do
+	keymap(
+		string.format("<leader>%d", i),
+		string.format("<cmd>tabnext %d<cr>", i),
+		string.format("Tab management: Go to tab %d", i)
+	)
+
+	keymap(
+		string.format("<leader>t%d", i),
+		string.format("<cmd>tabnext %d<cr>", i),
+		string.format("Tab management: Go to tab %d (alt)", i)
+	)
+
+	keymap(
+		string.format("<leader>tm%d", i),
+		string.format("<cmd>tabmove %d<cr>", i),
+		string.format("Tab management: Move tab to position %d", i)
+	)
+end
 
 --
 -- PLUGIN KEYMAPS --
@@ -102,12 +106,13 @@ keymap("<leader>fk", telescope.keymaps, "Telescope: Nvim keymaps")
 keymap("<leader>fs", telescope.grep_string, "Telescope: Selected word")
 keymap("<leader>fp", telescope.registers, "Telescope: Registers")
 keymap("<leader>fu", ":Telescope undo<CR>", "Telescope: Undo")
-keymap("<leader>fo", ":ObsidianSearch<CR>", "Telescope: Search Telescope")
 
 -- Obsidian: Leader -> o
+keymap("<leader>fo", ":ObsidianSearch<CR>", "Obsidian: Search with Telescope")
 keymap("<leader>od", ":ObsidianDailies -5 2<CR>", "Obsidian: Open Dailies")
 keymap("<leader>on", ":ObsidianNewFromTemplate<CR>", "Obsidian: New Note (from template)")
 keymap("<leader>os", ":ObsidianSearch<CR>", "Obsidian: Search")
 keymap("<leader>ot", ":ObsidianTags<CR>", "Obsidian: Tags")
 keymap("<leader>ow", ":ObsidianWorkspace<CR>", "Obsidian: Workspace")
 keymap("<leader>ob", ":ObsidianBacklink<CR>", "Obsidian: Backlinks")
+keymap("<leader>ox", ":ObsidianToggleCheckbox<CR>", "Obsidian: Toggle Checkbox")

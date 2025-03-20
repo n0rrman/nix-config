@@ -20,12 +20,6 @@ return {
 		},
 
 		mappings = {
-			["<leader>ox"] = {
-				action = function()
-					return require("obsidian").util.toggle_checkbox()
-				end,
-				opts = { buffer = true },
-			},
 			["<cr>"] = {
 				action = function()
 					return require("obsidian").util.gf_passthrough()

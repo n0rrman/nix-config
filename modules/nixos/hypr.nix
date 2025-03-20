@@ -5,7 +5,6 @@
     hyprlock
     hypridle
     hyprpaper
-    # hyprcursor
   ];
 
   home.file.".config/hypr" = {
@@ -14,10 +13,4 @@
       path = ./hypr;
     };
   };
-
-  # wayland.windowManager.hyprland = {
-  #   enable = true;
-  #   # package = pkgs.hyprland;
-  #   # systemd.enable = true;
-  # };
 }

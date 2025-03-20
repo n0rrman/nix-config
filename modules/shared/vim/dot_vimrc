@@ -34,8 +34,8 @@ nnoremap <leader>tm2 :tabmove 2<CR>   " Move tab to position 2
 nnoremap <leader>tm3 :tabmove 3<CR>   " Move tab to position 3
 nnoremap <leader>tm4 :tabmove 4<CR>   " Move tab to position 4
 nnoremap <leader>tm5 :tabmove 5<CR>   " Move tab to position 5
-nnoremap <S-h> :tabprevious<CR>
-nnoremap <S-l> :tabnext<CR>
+nnoremap <S-h> :tabprevious<CR>       " Go to previous tab
+nnoremap <S-l> :tabnext<CR>           " Go to next tab
 
 " Copy and paste to clipboard
 vnoremap <leader>cy "+y
