@@ -32,10 +32,10 @@ keymap("<leader><C-k>", "<C-W><S-k>", "Window arrangement: Move window up")
 keymap("<leader><C-l>", "<C-W><S-l>", "Window arrangement: Move window right")
 
 -- Window resize: Leader->[h,j,k,l]
-keymap("<leader>h", "<C-W><", "Window resize: Move window border left")
-keymap("<leader>j", "<C-W>+", "Window resize: Move window border down")
-keymap("<leader>k", "<C-W>-", "Window resize: Move window border up")
-keymap("<leader>l", "<C-W>>", "Window resize: Move window border right")
+keymap("<leader>h", "<C-W>5<", "Window resize: Move window border left")
+keymap("<leader>j", "<C-W>5+", "Window resize: Move window border down")
+keymap("<leader>k", "<C-W>5-", "Window resize: Move window border up")
+keymap("<leader>l", "<C-W>5>", "Window resize: Move window border right")
 
 -- Tab management: Leader->t...
 keymap("<leader>tn", "<cmd>tabnew<cr>", "Tab management: Create new tab")

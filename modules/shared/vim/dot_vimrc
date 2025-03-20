@@ -16,10 +16,10 @@ nnoremap <leader><C-k> <C-W><S-k> " Move window up
 nnoremap <leader><C-l> <C-W><S-l> " Move window right
 
 " Window resize: Leader->[h,j,k,l]
-nnoremap <leader>h <C-W><   " Resize window left
-nnoremap <leader>j <C-W>+   " Resize window down
-nnoremap <leader>k <C-W>-   " Resize window up
-nnoremap <leader>l <C-W>>   " Resize window right
+nnoremap <leader>h <C-W>5<   " Resize window left
+nnoremap <leader>j <C-W>5+   " Resize window down
+nnoremap <leader>k <C-W>5-   " Resize window up
+nnoremap <leader>l <C-W>5>   " Resize window right
 
 " Tab management: Leader->t...
 nnoremap <leader>tn :tabnew<CR>       " Create new tab
