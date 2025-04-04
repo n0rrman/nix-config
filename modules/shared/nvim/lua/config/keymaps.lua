@@ -42,8 +42,6 @@ keymap("<leader>l", "<C-W>5>", "Window resize: Move window border right")
 keymap("<leader>tn", "<cmd>tabnew<cr>", "Tab management: Create new tab")
 keymap("<leader>tx", "<cmd>tabclose<cr>", "Tab management: Close current tab")
 keymap("<leader>t,", ":LualineRenameTab ", "Tab management: Rename current tab")
-keymap("<S-h>", ":tabprevious<CR>", "Tab management: Previous tab")
-keymap("<S-l>", ":tabnext<CR>", "Tab management: Next tab")
 for i = 1, 9 do
 	keymap(
 		string.format("<leader>%d", i),
