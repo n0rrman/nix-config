@@ -65,7 +65,10 @@
   };
 
   # Configure console keymap
-  console.keyMap = "us";
+  console = {
+    keyMap = "us";
+  };
+
 
   # Shell
   programs.fish.enable = true;
