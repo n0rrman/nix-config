@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set your Username
- username=$USER
+username=$USER
 
 # Read the username alias from hyprlock.conf
 # username=$(grep -oP '^\$USER\s*=\s*\K\S+' ~/.config/hypr/hyprlock.conf)
