@@ -16,6 +16,7 @@
 
     # Utility
     bitwarden-desktop
+    bitwarden-cli
     obsidian
     librewolf
     google-chrome

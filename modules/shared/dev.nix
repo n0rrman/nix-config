@@ -27,6 +27,7 @@
     age
     delta
     pgadmin4-desktopmode
+    jq
 
     # Languages
     luarocks
@@ -38,6 +39,7 @@
     gnumake
     gcc
     postgresql
+
 
   ];
 }
