@@ -15,7 +15,6 @@
     jetbrains.idea-ultimate
 
     # Utility
-    bitwarden-desktop
     bitwarden-cli
     obsidian
     librewolf
