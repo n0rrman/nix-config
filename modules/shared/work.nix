@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
 
   # Docker config
@@ -18,8 +18,6 @@
     bitwarden-cli
     obsidian
     librewolf
-    google-chrome
-    inputs.zen-browser.packages."x86_64-linux".default
 
     # Docker
     docker

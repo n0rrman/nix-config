@@ -26,7 +26,6 @@
     ripgrep
     age
     delta
-    pgadmin4-desktopmode
     jq
 
     # Languages
@@ -39,7 +38,6 @@
     gnumake
     gcc
     postgresql
-
 
   ];
 }
