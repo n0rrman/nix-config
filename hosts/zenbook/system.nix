@@ -6,7 +6,7 @@
 {
 
   # Network
-  networking.hostName = "zenbook";
+  networking.hostName = "nixbook";
   networking.networkmanager.enable = true;
 
   # Locale
@@ -69,7 +69,6 @@
   console = {
     keyMap = "us";
   };
-
 
   # Shell
   programs.fish.enable = true;
