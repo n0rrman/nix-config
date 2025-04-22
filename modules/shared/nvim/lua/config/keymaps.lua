@@ -97,7 +97,6 @@ keymap("<leader>ak", "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Diagnostic: Go 
 keymap("<leader>ff", telescope.find_files, "Telescope: Find files")
 keymap("<leader>fg", telescope.live_grep, "Telescope: Live grep")
 keymap("<leader>fb", telescope.buffers, "Telescope: Buffers")
-keymap("<leader>fh", telescope.help_tags, "Telescope: Help tags")
 keymap("<leader>fv", telescope.git_status, "Telescope: Git status")
 keymap("<leader>fr", telescope.lsp_references, "Telescope: Function references")
 keymap("gr", telescope.lsp_references, "Telescope: Function references")
