@@ -18,6 +18,7 @@
     bitwarden-cli
     obsidian
     librewolf
+    libreoffice
 
     # Docker
     docker
