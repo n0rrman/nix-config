@@ -6,6 +6,7 @@ set --prepend GOPATH "$HOME/go"
 ## Config
 set -x EDITOR nvim
 set -x XDG_CONFIG_HOME $HOME/.config
+fish_config theme choose "Catppuccin Mocha"
 
 ## Alias
 alias rm="trash" # Safe delete

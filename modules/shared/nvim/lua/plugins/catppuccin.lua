@@ -5,6 +5,7 @@ return {
 	config = function()
 		local cmp = require("catppuccin")
 		cmp.setup({
+			flavour = "mocha",
 			transparent_background = true,
 			dim_inactive = {
 				enable = true,
