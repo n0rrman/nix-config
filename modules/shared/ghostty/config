@@ -22,8 +22,11 @@
 # palette = 14=#8ec07c
 # palette = 15=#ebdbb2
 
+# Theme
+theme = catppuccin-macchiato
+
 # Background blur
-background-opacity = 0.80
+background-opacity = 0.70
 background-blur-radius = 60
 
 # Font

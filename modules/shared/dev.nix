@@ -13,8 +13,9 @@
     source = ./tmux/dot_tmux.conf;
   };
 
-  home.file.".config/fish/config.fish" = {
-    source = ./fish/config.fish;
+  home.file.".config/fish" = {
+    source = ./fish;
+    recursive = true;
   };
 
   home.packages = with pkgs; [
