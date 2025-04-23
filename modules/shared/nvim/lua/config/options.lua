@@ -52,7 +52,7 @@ vim.opt.conceallevel = 2 -- Conceal text.
 
 -- Styling
 vim.cmd([[
-  colorscheme gruvbox
+  colorscheme everforest
 ]])
 
 -- File type override for Angular components

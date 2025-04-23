@@ -4,7 +4,7 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "gruvbox-material",
+			theme = "everforest",
 			-- Rounded
 			-- section_separators = { left = " ", right = " " },
 			-- component_separators = { left = " ", right = "  " },
