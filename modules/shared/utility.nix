@@ -6,6 +6,5 @@
     wget
     unzip
     htop
-    gparted
   ];
 }
