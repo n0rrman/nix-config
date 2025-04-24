@@ -1,5 +1,6 @@
 font=Source Sans Pro Semi-Bold 8
 background-color=#1e1e2e
+border-color=#cba6f7
 format=<b>%a ⏵</b> %s\n%b
 sort=-time
 layer=overlay
@@ -8,7 +9,7 @@ width=300
 height=110
 margin=5
 padding=0,5,10
-border-size=0
+border-size=2
 border-radius=15
 icons=1
 max-icon-size=64
