@@ -37,12 +37,18 @@ function unpack
     return 1
   end
 
-  age -d -o - $encrypted_file | tar -xzvf -
+  mkdir -p $filename
+  pushd $filename
+  age -d -o - ../$encrypted_file | tar -xzvf -
+  set status_code $status
+  popd
 
-  if test $status -eq 0
+  if test $status_code -eq 0
     echo "Successfully decrypted and extracted archive: $encrypted_file"
   else
     echo "Error: Failed to decrypt and extract archive."
+    rm -rf $filename
     return 1
   end
 end
+
