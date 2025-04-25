@@ -1,12 +1,16 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.file.".config/nvim" = {
     source = ./nvim;
     recursive = true;
   };
 
+  programs.neovim = {
+    enable = true;
+    package = inputs.neovim.packages.${pkgs.system}.default;
+  };
+
   home.packages = with pkgs; [
-    neovim
 
     # LSP Servers
     nodePackages.typescript-language-server # tsserver
@@ -24,6 +28,8 @@
     tailwindcss-language-server # tailwind
     nodePackages.dockerfile-language-server-nodejs # dockerls
     sqls # For SQL language server
+    # graphql-language-service-cli # graphql
+    # nodePackages.graphql-language-service-cli # graphql
 
     # Linters
     eslint_d # eslint_d

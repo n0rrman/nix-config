@@ -52,6 +52,7 @@ return {
 		tailwindcss = {}, -- Tailwind CSS
 		sqls = {}, -- SQL/PostgreSQL
 		templ = {}, -- Go templating
+		graphql = {}, -- GraphQL
 	},
 
 	-- TREESITTER --
@@ -79,5 +80,6 @@ return {
 		"nginx",
 		"yaml",
 		"sql",
+        "graphql",
 	},
 }

@@ -10,8 +10,7 @@
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+    neovim.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs =
@@ -76,6 +75,8 @@
 
           home-manager.nixosModules.home-manager
           {
+            home-manager.useGlobalPkgs = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.norrman =
               { pkgs, ... }:
               {

@@ -52,7 +52,6 @@ vim.opt.conceallevel = 2 -- Conceal text.
 
 -- Styling
 vim.cmd([[
-  "colorscheme everforest
   colorscheme catppuccin
 ]])
 
@@ -73,12 +72,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- DIAGNOSTIC
 vim.diagnostic.config({
-	virtual_text = {
-		prefix = "●",
-		priority = 1,
-		spacing = 1,
-		virt_text_pos = "eol",
-	},
+	virtual_lines = true,
+	-- virtual_text = {
+	-- 	prefix = "●",
+	-- 	priority = 1,
+	-- 	spacing = 1,
+	-- 	virt_text_pos = "eol",
+	-- },
 	float = {
 		border = "rounded",
 		source = "always",
