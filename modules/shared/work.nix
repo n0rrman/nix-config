@@ -32,6 +32,7 @@
     obsidian
     librewolf
     libreoffice
+    gparted
 
     # Docker
     docker
