@@ -4,6 +4,7 @@
 -- Imports
 local ng = require("ng")
 local telescope = require("telescope.builtin")
+local harpoon = require("harpoon")
 
 -- New keymap function
 local function keymap(input, output, desc, mode)
@@ -62,7 +63,7 @@ for i = 1, 9 do
 	)
 end
 
---
+-->
 -- PLUGIN KEYMAPS --
 
 -- Copy / paste: Leader -> c
@@ -99,11 +100,11 @@ keymap("<leader>fg", telescope.live_grep, "Telescope: Live grep")
 keymap("<leader>fb", telescope.buffers, "Telescope: Buffers")
 keymap("<leader>fv", telescope.git_status, "Telescope: Git status")
 keymap("<leader>fr", telescope.lsp_references, "Telescope: Function references")
-keymap("gr", telescope.lsp_references, "Telescope: Function references")
 keymap("<leader>fk", telescope.keymaps, "Telescope: Nvim keymaps")
 keymap("<leader>fs", telescope.grep_string, "Telescope: Selected word")
 keymap("<leader>fp", telescope.registers, "Telescope: Registers")
 keymap("<leader>fu", ":Telescope undo<CR>", "Telescope: Undo")
+keymap("grr", telescope.lsp_references, "Telescope: Function references")
 
 -- Obsidian: Leader -> o
 keymap("<leader>fo", ":ObsidianSearch<CR>", "Obsidian: Search with Telescope")
@@ -114,3 +115,37 @@ keymap("<leader>ot", ":ObsidianTags<CR>", "Obsidian: Tags")
 keymap("<leader>ow", ":ObsidianWorkspace<CR>", "Obsidian: Workspace")
 keymap("<leader>ob", ":ObsidianBacklink<CR>", "Obsidian: Backlinks")
 keymap("<leader>ox", ":ObsidianToggleCheckbox<CR>", "Obsidian: Toggle Checkbox")
+
+
+-- Harpoon: Leader -> h
+local conf = require("telescope.config").values
+local function toggle_telescope(harpoon_files)
+	local file_paths = {}
+	for _, item in ipairs(harpoon_files.items) do
+		table.insert(file_paths, item.value)
+	end
+
+	require("telescope.pickers")
+		.new({}, {
+			prompt_title = "Harpoon",
+			finder = require("telescope.finders").new_table({
+				results = file_paths,
+			}),
+			previewer = conf.file_previewer({}),
+			sorter = conf.generic_sorter({}),
+		})
+		:find()
+end
+
+keymap("<leader>ha", function() harpoon:list():add() end, "Harpoon: Add file")
+keymap("<leader>fh", function() toggle_telescope(harpoon:list()) end, "Harpoon: Search files")
+keymap("<leader>hh", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, "Harpoon: Toggle menu")
+-- vim.keymap.set("n", "<leader>ha", function()
+-- 	harpoon:list():add()
+-- end)
+-- vim.keymap.set("n", "<leader>fh", function()
+-- 	toggle_telescope(harpoon:list())
+-- end, { desc = "Open harpoon window" })
+-- vim.keymap.set("n", "<leader>hh", function()
+-- 	harpoon.ui:toggle_quick_menu(harpoon:list())
+-- end)

@@ -22,7 +22,6 @@ vim.opt.incsearch = true -- Enable incremental searching.
 vim.opt.ignorecase = true -- Ignore case when searching.
 vim.opt.smartcase = true -- Overrides 'ignorecase' if uppercase.
 
--- In your options.lua
 -- FOLDING
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -73,12 +72,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- DIAGNOSTIC
 vim.diagnostic.config({
 	virtual_lines = true,
-	-- virtual_text = {
-	-- 	prefix = "●",
-	-- 	priority = 1,
-	-- 	spacing = 1,
-	-- 	virt_text_pos = "eol",
-	-- },
+	virtual_text = false,
 	float = {
 		border = "rounded",
 		source = "always",
@@ -104,11 +98,11 @@ vim.cmd([[
 ]])
 
 -- Highlight on yank
-vim.cmd([[ 
-    augroup highlight_yank 
-        autocmd! 
-        au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200}) 
-    augroup END 
+vim.cmd([[
+    augroup highlight_yank
+        autocmd!
+        au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=200})
+    augroup END
 ]])
 
 -- Set spell check for markdown and txt files
@@ -119,36 +113,3 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.spell = true
 	end,
 })
-
-local harpoon = require("harpoon")
-harpoon:setup({})
-
--- basic telescope configuration
-local conf = require("telescope.config").values
-local function toggle_telescope(harpoon_files)
-	local file_paths = {}
-	for _, item in ipairs(harpoon_files.items) do
-		table.insert(file_paths, item.value)
-	end
-
-	require("telescope.pickers")
-		.new({}, {
-			prompt_title = "Harpoon",
-			finder = require("telescope.finders").new_table({
-				results = file_paths,
-			}),
-			previewer = conf.file_previewer({}),
-			sorter = conf.generic_sorter({}),
-		})
-		:find()
-end
-
-vim.keymap.set("n", "<leader>ha", function()
-	harpoon:list():add()
-end)
-vim.keymap.set("n", "<leader>fh", function()
-	toggle_telescope(harpoon:list())
-end, { desc = "Open harpoon window" })
-vim.keymap.set("n", "<leader>hh", function()
-	harpoon.ui:toggle_quick_menu(harpoon:list())
-end)

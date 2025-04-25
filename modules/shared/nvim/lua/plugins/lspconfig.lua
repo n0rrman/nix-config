@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	enabled = true,
+	enabled = false,
 	event = "VeryLazy",
 	config = function()
 		local lspconfig = require("lspconfig")

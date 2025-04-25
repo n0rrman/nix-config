@@ -28,7 +28,6 @@ return {
 		typescriptreact = { "eslint_d" },
 		dockerfile = { "hadolint" },
 		python = { "flake8" },
-		lua = { "luacheck" },
 		make = { "checkmake" },
 		markdown = { "proselint" },
 		json = { "jsonlint" },
@@ -80,6 +79,6 @@ return {
 		"nginx",
 		"yaml",
 		"sql",
-        "graphql",
+		"graphql",
 	},
 }

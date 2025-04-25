@@ -24,6 +24,6 @@ require("lazy").setup({
 			import = "plugins",
 		},
 	},
-	install = { colorscheme = { "everforest" } },
+	install = { colorscheme = { "gruvbox" } },
 	checker = { enabled = true },
 })
