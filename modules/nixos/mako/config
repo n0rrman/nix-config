@@ -1,6 +1,6 @@
 font=Source Sans Pro Semi-Bold 8
 background-color=#1e1e2e
-border-color=#cba6f7
+border-color=#89b4faee
 format=<b>%a ⏵</b> %s\n%b
 sort=-time
 layer=overlay
