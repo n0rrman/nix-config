@@ -12,14 +12,14 @@
   networking.firewall = {
     trustedInterfaces = [ "docker0" ];
     checkReversePath = false;
-    extraCommands = ''
-      ip46tables -A INPUT -s 172.17.0.0/16 -j ACCEPT
-      ip46tables -A OUTPUT -d 172.17.0.0/16 -j ACCEPT
-    '';
-    extraStopCommands = ''
-      ip46tables -D INPUT -s 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
-      ip46tables -D OUTPUT -d 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
-    '';
+    # extraCommands = ''
+    #   ip46tables -A INPUT -s 172.17.0.0/16 -j ACCEPT
+    #   ip46tables -A OUTPUT -d 172.17.0.0/16 -j ACCEPT
+    # '';
+    # extraStopCommands = ''
+    #   ip46tables -D INPUT -s 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
+    #   ip46tables -D OUTPUT -d 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
+    # '';
   };
 
   environment.systemPackages = with pkgs; [
