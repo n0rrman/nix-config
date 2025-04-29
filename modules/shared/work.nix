@@ -16,12 +16,16 @@
     trustedInterfaces = [ "docker0" ];
     checkReversePath = false;
     extraCommands = ''
-      ip46tables -A INPUT -s 172.17.0.0/16 -j ACCEPT
-      ip46tables -A OUTPUT -d 172.17.0.0/16 -j ACCEPT
+      if ip link show docker0 >/dev/null 2>&1; then
+        ip46tables -A INPUT -s 172.17.0.0/16 -j ACCEPT
+        ip46tables -A OUTPUT -d 172.17.0.0/16 -j ACCEPT
+      fi
     '';
     extraStopCommands = ''
-      ip46tables -D INPUT -s 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
-      ip46tables -D OUTPUT -d 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
+      if ip link show docker0 >/dev/null 2>&1; then
+        ip46tables -D INPUT -s 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
+        ip46tables -D OUTPUT -d 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
+      fi
     '';
   };
 
