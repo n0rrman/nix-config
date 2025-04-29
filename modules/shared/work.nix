@@ -9,7 +9,7 @@
 
   virtualisation.docker = {
     enable = true;
-    extraOptions = "--bip=\"172.26.0.1/16\" --default-address-pool=\"base=172.30.0.0/16,size=24\" --ipv6=false --default-ulimit nofile=1024000:1024000 --mtu=1340";
+    extraOptions = "--bip=172.17.0.1/16 --default-address-pool=base=172.18.0.0/16,size=24 --ipv6=false --default-ulimit nofile=1024000:1024000 --mtu=1340";
   };
 
   networking.firewall = {
@@ -17,14 +17,14 @@
     checkReversePath = false;
     extraCommands = ''
       if ip link show docker0 >/dev/null 2>&1; then
-        ip46tables -A INPUT -s 172.17.0.0/16 -j ACCEPT
-        ip46tables -A OUTPUT -d 172.17.0.0/16 -j ACCEPT
+        iptables -A INPUT -i docker0 -j ACCEPT
+        iptables -A FORWARD -i docker0 -j ACCEPT
       fi
     '';
     extraStopCommands = ''
       if ip link show docker0 >/dev/null 2>&1; then
-        ip46tables -D INPUT -s 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
-        ip46tables -D OUTPUT -d 172.17.0.0/16 -j ACCEPT 2>/dev/null || true
+        iptables -D INPUT -i docker0 -j ACCEPT 2>/dev/null || true
+        iptables -D FORWARD -i docker0 -j ACCEPT 2>/dev/null || true
       fi
     '';
   };
