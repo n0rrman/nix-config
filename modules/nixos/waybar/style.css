@@ -67,7 +67,7 @@ tooltip {
   opacity: 0.8;
   padding: 0px 10px;
   margin: 0px 0px;
-  margin-top: 6px;
+  margin-top: 5px;
   border: 1px solid #181825;
 }
 
@@ -94,8 +94,8 @@ tooltip {
 
 #workspaces {
   background: #1e1e2e;
-  border-radius: 10px;
-  margin-left: 10px;
+  border-radius: 0px 10px 10px 0px;
+  margin-left: 0px;
   padding-right: 0px;
   padding-left: 5px;
 }
