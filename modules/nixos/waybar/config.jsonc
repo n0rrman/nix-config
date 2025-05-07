@@ -5,7 +5,7 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 37,
+    "height": 35,
     "modules-right": [
         "clock"
     ],
