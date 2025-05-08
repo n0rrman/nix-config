@@ -71,7 +71,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- DIAGNOSTIC
 vim.diagnostic.config({
-	virtual_lines = true,
+	virtual_lines = { current_line = true },
 	virtual_text = false,
 	float = {
 		border = "rounded",
@@ -96,6 +96,10 @@ vim.cmd([[
   highlight DiagnosticSignInfo guibg=NONE guifg=#83a598
   highlight DiagnosticSignHint guibg=NONE guifg=#8ec07c
 ]])
+-- highlight DiagnosticUnderlineError guibg=#402020
+-- highlight DiagnosticUnderlineWarn guibg=#403820
+-- highlight DiagnosticUnderlineInfo guibg=#204038
+-- highlight DiagnosticUnderlineHint guibg=#204020
 
 -- Highlight on yank
 vim.cmd([[
