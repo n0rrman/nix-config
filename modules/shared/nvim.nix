@@ -28,8 +28,8 @@
     tailwindcss-language-server # tailwind
     nodePackages.dockerfile-language-server-nodejs # dockerls
     sqls # For SQL language server
-    # graphql-language-service-cli # graphql
-    # nodePackages.graphql-language-service-cli # graphql
+    graphql-language-service-cli # graphql
+    nodePackages.graphql-language-service-cli # graphql
 
     # Linters
     eslint_d # eslint_d
@@ -42,7 +42,7 @@
     nodePackages.jsonlint # jsonlint
 
     # Formatters
-    nodePackages.prettier-plugin-toml
+    # nodePackages.prettier-plugin-toml
     nodePackages.prettier # prettier
     prettierd
     stylua # stylua
