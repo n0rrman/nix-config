@@ -38,6 +38,7 @@
     bitwarden-cli
     obsidian
     librewolf
+    brave
     libreoffice
     gparted
 
