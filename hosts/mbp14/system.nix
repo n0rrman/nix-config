@@ -1,5 +1,9 @@
-{ pkgs, ... }: {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+{ pkgs, inputs, ... }:
+{
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
@@ -12,6 +16,8 @@
     docker
     docker-compose
     colima
+
+    inputs.agenix.packages.aarch64-darwin.default
   ];
 
   system.keyboard.enableKeyMapping = true;

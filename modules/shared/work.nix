@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
 
   # Docker config
@@ -28,6 +28,16 @@
   #     fi
   #   '';
   # };
+
+  age.secrets.wireguard = {
+    file = ../../secrets/wireguard.age;
+  };
+
+  networking.wg-quick.interfaces = {
+    wg0 = {
+      configFile = config.age.secrets.wireguard.path;
+    };
+  };
 
   environment.systemPackages = with pkgs; [
 

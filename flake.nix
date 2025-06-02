@@ -11,6 +11,9 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     neovim.url = "github:nix-community/neovim-nightly-overlay";
+
+    agenix.url = "github:ryantm/agenix";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -18,6 +21,8 @@
       nixpkgs,
       darwin,
       home-manager,
+      neovim,
+      agenix,
       ...
     }@inputs:
 
@@ -36,6 +41,7 @@
           ./modules/darwin/homebrew.nix # Homebrew
           ./modules/shared/utility.nix # Utility packages
 
+          agenix.nixosModules.default
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -53,6 +59,7 @@
                   ./modules/shared/dev.nix
                   ./modules/shared/nvim.nix
 
+                  agenix.homeManagerModules.default
                 ];
               };
           }
@@ -75,6 +82,7 @@
           ./modules/shared/utility.nix # Utility packages
           ./modules/shared/work.nix # Work packages
 
+          agenix.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -99,6 +107,7 @@
                   ./modules/shared/dev.nix
                   ./modules/shared/nvim.nix
 
+                  agenix.homeManagerModules.default
                 ];
               };
           }

@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   lib,
   ...
@@ -82,6 +83,8 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
+    inputs.agenix.packages.x86_64-linux.default
+
     ghostty
 
     xdg-desktop-portal

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
-
   home.packages = with pkgs; [
+
     # Fonts
     nerd-fonts.hack
     nerd-fonts.jetbrains-mono
