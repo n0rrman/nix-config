@@ -105,10 +105,10 @@ keymap("<leader>fp", telescope.registers, "Telescope: Registers")
 keymap("<leader>fu", ":Telescope undo<CR>", "Telescope: Undo")
 
 -- LSP
-keymap("<leader>fd", telescope.builtin.lsp_definitions, "Telescope: LSP definitions")
-keymap("<leader>fr", telescope.builtin.lsp_references, "Telescope: LSP references")
-keymap("<leader>fi", telescope.builtin.lsp_implementations, "Telescope: LSP implementations")
-keymap("<leader>ft", telescope.builtin.lsp_type_definitions, "Telescope: LSP type definitions")
+keymap("<leader>fd", telescope.lsp_definitions, "Telescope: LSP definitions")
+keymap("<leader>fr", telescope.lsp_references, "Telescope: LSP references")
+keymap("<leader>fi", telescope.lsp_implementations, "Telescope: LSP implementations")
+keymap("<leader>ft", telescope.lsp_type_definitions, "Telescope: LSP type definitions")
 
 -- Obsidian: Leader -> o
 keymap("<leader>fo", ":ObsidianSearch<CR>", "Obsidian: Search with Telescope")
