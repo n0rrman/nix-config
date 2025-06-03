@@ -38,6 +38,8 @@
   ];
   nixpkgs.config.allowUnfree = true;
 
+  programs.ssh.startAgent = true;
+
   # GTK support
   programs.dconf.enable = true;
 

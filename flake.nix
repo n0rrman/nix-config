@@ -30,6 +30,7 @@
 
       ###  MBP14  ###
       darwinConfigurations.mbp14 = darwin.lib.darwinSystem {
+        specialArgs = { inherit inputs; };
         system = "aarch64-darwin";
 
         # SYSTEM
