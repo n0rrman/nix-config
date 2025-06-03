@@ -99,12 +99,16 @@ keymap("<leader>ff", telescope.find_files, "Telescope: Find files")
 keymap("<leader>fg", telescope.live_grep, "Telescope: Live grep")
 keymap("<leader>fb", telescope.buffers, "Telescope: Buffers")
 keymap("<leader>fv", telescope.git_status, "Telescope: Git status")
-keymap("<leader>fr", telescope.lsp_references, "Telescope: Function references")
 keymap("<leader>fk", telescope.keymaps, "Telescope: Nvim keymaps")
 keymap("<leader>fs", telescope.grep_string, "Telescope: Selected word")
 keymap("<leader>fp", telescope.registers, "Telescope: Registers")
 keymap("<leader>fu", ":Telescope undo<CR>", "Telescope: Undo")
-keymap("grr", telescope.lsp_references, "Telescope: Function references")
+
+-- LSP
+keymap("<leader>fd", telescope.builtin.lsp_definitions, "Telescope: LSP definitions")
+keymap("<leader>fr", telescope.builtin.lsp_references, "Telescope: LSP references")
+keymap("<leader>fi", telescope.builtin.lsp_implementations, "Telescope: LSP implementations")
+keymap("<leader>ft", telescope.builtin.lsp_type_definitions, "Telescope: LSP type definitions")
 
 -- Obsidian: Leader -> o
 keymap("<leader>fo", ":ObsidianSearch<CR>", "Obsidian: Search with Telescope")
