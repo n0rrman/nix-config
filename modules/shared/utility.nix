@@ -7,5 +7,6 @@
     wget
     unzip
     htop
+    sqlite
   ];
 }
