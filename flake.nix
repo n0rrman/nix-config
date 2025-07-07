@@ -35,20 +35,6 @@
 
         # SYSTEM
         modules = [
-          {
-            nixpkgs.overlays = [
-              (self: super: {
-                sudo = super.sudo.overrideAttrs (oldAttrs: {
-                  version = "1.9.17p1";
-                  src = super.fetchurl {
-                    url = "https://www.sudo.ws/dist/sudo-1.9.17p1.tar.gz";
-                    hash = "sha256-/2B+pxcHIZdzinj3eGks1t+afj5ARWX1HeBjyidFXTI=";
-                  };
-                });
-              })
-            ];
-          }
-
           ./hosts/mbp14/system.nix # General system configs
           ./hosts/mbp14/users.nix # Users config
 
