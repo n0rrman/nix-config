@@ -12,6 +12,9 @@
 
     neovim.url = "github:nix-community/neovim-nightly-overlay";
 
+    ghostty.url = "github:ghostty-org/ghostty";
+    ghostty.inputs.nixpkgs.follows = "nixpkgs";
+
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -22,6 +25,7 @@
       darwin,
       home-manager,
       neovim,
+      ghostty,
       agenix,
       ...
     }@inputs:

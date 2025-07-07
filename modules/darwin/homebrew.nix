@@ -3,9 +3,6 @@
   homebrew = {
     enable = true;
     casks = [
-      # Development
-      "ghostty"
-
       # Social
       "messenger"
       "discord"

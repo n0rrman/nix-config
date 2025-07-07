@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
 
   home.file.".config/ghostty" = {
@@ -19,6 +19,8 @@
   };
 
   home.packages = with pkgs; [
+    # Terminal
+    inputs.ghostty.packages.${pkgs.system}.default
 
     # Tools
     tmux
