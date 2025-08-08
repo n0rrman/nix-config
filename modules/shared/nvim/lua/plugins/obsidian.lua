@@ -35,7 +35,7 @@ return {
 		},
 		daily_notes = {
 			folder = "daily",
-			template = "default.md",
+			template = "daily.md",
 		},
 		notes_subdir = "quick",
 		note_id_func = function()
