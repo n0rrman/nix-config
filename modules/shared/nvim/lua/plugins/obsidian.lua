@@ -29,13 +29,11 @@ return {
 		},
 		templates = {
 			folder = "template",
-			date_format = "%Y-%m-%d",
-			time_format = "%H:%M",
-			substitutions = {},
 		},
 		daily_notes = {
 			folder = "daily",
 			template = "daily.md",
+            default_tags = {},
 		},
 		notes_subdir = "quick",
 		note_id_func = function()
