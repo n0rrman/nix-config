@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   home.file.".config/nvim" = {
     source = ./nvim;
@@ -7,7 +7,7 @@
 
   programs.neovim = {
     enable = true;
-    package = inputs.neovim.packages.${pkgs.system}.default;
+    # package = inputs.neovim.packages.${pkgs.system}.default;
   };
 
   home.packages = with pkgs; [
