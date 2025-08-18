@@ -5,6 +5,8 @@
     home = "/Users/norrman";
   };
 
+  system.primaryUser = "norrman";
+
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
 

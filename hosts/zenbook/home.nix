@@ -1,6 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
+
+    # Terminal
+    inputs.ghostty.packages.${pkgs.system}.default
 
     # Fonts
     nerd-fonts.hack
