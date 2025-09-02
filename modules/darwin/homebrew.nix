@@ -18,7 +18,6 @@
       "steam"
 
       # Browser
-      "zen-browser"
       "google-chrome"
     ];
     onActivation.cleanup = "uninstall";
