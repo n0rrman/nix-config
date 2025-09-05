@@ -35,20 +35,9 @@
     lua51Packages.lua
     nodePackages."@angular/cli"
     cargo
-    # go
+    go
     gnumake
     gcc
     postgresql
-
-    (pkgs.go_1_25.overrideAttrs (
-      oldAttrs: finalAttrs: rec {
-        version = "1.25.1";
-        src = pkgs.fetchurl {
-          url = "https://go.dev/dl/go${version}.src.tar.gz";
-          hash = "sha256-0BDBCc7pTYDv5oHqtGvepJGskGv0ZYPDLp8NuwvRpZQ=";
-        };
-      }
-    ))
-
   ];
 }
