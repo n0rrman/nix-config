@@ -80,5 +80,7 @@ return {
 		"yaml",
 		"sql",
 		"graphql",
+		"regex",
+		"bash",
 	},
 }

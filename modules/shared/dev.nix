@@ -25,9 +25,11 @@
     vim
     fzf
     ripgrep
+    fd
     age
     delta
     jq
+    tree-sitter
 
     # Languages
     luarocks
