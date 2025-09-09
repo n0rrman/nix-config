@@ -10,6 +10,7 @@ fish_config theme choose "Catppuccin Mocha"
 
 ## Alias
 alias rm="trash" # Safe delete
+alias k="kubectl"
 
 
 ## Commands to run in interactive sessions can go here
