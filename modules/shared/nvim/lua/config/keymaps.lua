@@ -119,6 +119,7 @@ keymap("<leader>ot", ":ObsidianTags<CR>", "Obsidian: Tags")
 keymap("<leader>ow", ":ObsidianWorkspace<CR>", "Obsidian: Workspace")
 keymap("<leader>ob", ":ObsidianBacklink<CR>", "Obsidian: Backlinks")
 keymap("<leader>ox", ":ObsidianToggleCheckbox<CR>", "Obsidian: Toggle Checkbox")
+keymap("<leader>oe", ":ObsidianExtractNote<CR>", "Obsidian: Extract visually selected tet into a new note")
 
 
 -- Harpoon: Leader -> h
