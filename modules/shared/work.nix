@@ -49,7 +49,7 @@
     obsidian
     librewolf
     brave
-    libreoffice
+    onlyoffice-desktopeditors
     gparted
 
     # Docker
