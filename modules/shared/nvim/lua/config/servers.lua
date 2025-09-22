@@ -35,23 +35,23 @@ return {
 
 	-- LSP --
 	lsp = {
-		emmet_ls = {}, -- HTML/CSS snippets
-		lua_ls = {}, -- Lua
-		angularls = {}, -- Angular
-		ts_ls = {}, -- TypeScript/JavaScript
-		cssls = {}, -- CSS
-		nil_ls = {}, -- Nix
-		dockerls = {}, -- Docker
-		gopls = {}, -- Go
-		rust_analyzer = {}, -- Rust
-		clangd = {}, -- C/C++
-		html = {}, -- HTML
-		pyright = {}, -- Python
-		marksman = {}, -- Markdown
-		tailwindcss = {}, -- Tailwind CSS
-		sqls = {}, -- SQL/PostgreSQL
-		templ = {}, -- Go templating
-		graphql = {}, -- GraphQL
+		"emmet_ls", -- HTML/CSS snippets
+		"lua_ls", -- Lua
+		"angularls", -- Angular
+		"ts_ls", -- TypeScript/JavaScript
+		"cssls", -- CSS
+		"dockerls", -- Docker
+		"gopls", -- Go
+		"rust_analyzer", -- Rust
+		"clangd", -- C/C++
+		"html", -- HTML
+		"pyright", -- Python
+		"marksman", -- Markdown
+		"tailwindcss", -- Tailwind CSS
+		"nil_ls", -- Nix
+		"sqls", -- SQL/PostgreSQL
+		"templ", -- Go templating
+		"graphql", -- GraphQL
 	},
 
 	-- TREESITTER --
