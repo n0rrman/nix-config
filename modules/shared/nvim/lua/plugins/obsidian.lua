@@ -33,7 +33,6 @@ return {
 		daily_notes = {
 			folder = "daily",
 			template = "daily.md",
-            date_format = "%Y%m%d",
             default_tags = {},
 		},
 		notes_subdir = "quick",
