@@ -26,7 +26,7 @@
     angular-language-server # angularls
     emmet-ls # emmet_ls
     tailwindcss-language-server # tailwind
-    nodePackages.dockerfile-language-server-nodejs # dockerls
+    dockerfile-language-server # dockerls
     sqls # For SQL language server
     graphql-language-service-cli # graphql
     nodePackages.graphql-language-service-cli # graphql
