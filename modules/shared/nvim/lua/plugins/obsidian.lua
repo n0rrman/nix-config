@@ -33,13 +33,15 @@ return {
 		daily_notes = {
 			folder = "daily",
 			template = "daily.md",
-            default_tags = {},
+			default_tags = {},
 		},
 		notes_subdir = "quick",
 		note_id_func = function()
 			return tostring(os.time())
 		end,
 
+		preferred_link_style = "wiki",
+		wiki_link_func = "prepend_note_id",
 		follow_url_func = function(url)
 			vim.ui.open(url)
 		end,
