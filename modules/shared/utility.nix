@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    # Essential
     vim
     git
     bat
@@ -8,5 +9,9 @@
     unzip
     htop
     sqlite
+
+    # Docker
+    docker
+    docker-compose
   ];
 }

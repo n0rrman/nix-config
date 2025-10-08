@@ -10,9 +10,6 @@
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    ghostty.url = "github:ghostty-org/ghostty";
-    ghostty.inputs.nixpkgs.follows = "nixpkgs";
-
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -22,7 +19,6 @@
       nixpkgs,
       darwin,
       home-manager,
-      ghostty,
       agenix,
       ...
     }@inputs:

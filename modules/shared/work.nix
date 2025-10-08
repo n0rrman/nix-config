@@ -52,15 +52,11 @@
     onlyoffice-desktopeditors
     gparted
 
-    # Docker
-    docker
-    docker-compose
-    docker-buildx
-
-    # Kubernetes
+    # Docker & K8s
     stern
     kubectx
     kubectl
+    docker-buildx
 
     # Google Cloud
     (pkgs.google-cloud-sdk.withExtraComponents [

@@ -12,11 +12,7 @@
 
   environment.systemPackages = with pkgs; [
     trash-cli
-
-    docker
-    docker-compose
     colima
-
     inputs.agenix.packages.aarch64-darwin.default
   ];
 
