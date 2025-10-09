@@ -4,6 +4,7 @@ return {
 	cmd = "Oil",
 	opts = {
 		delete_to_trash = true,
+		watch_for_changes = false,
 		view_options = {
 			show_hidden = true,
 		},
