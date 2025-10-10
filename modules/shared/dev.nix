@@ -30,6 +30,7 @@
     delta
     jq
     tree-sitter
+    trivy
 
     # Languages
     luarocks
