@@ -51,6 +51,7 @@
     brave
     onlyoffice-desktopeditors
     gparted
+    trivy
 
     # Docker & K8s
     stern
