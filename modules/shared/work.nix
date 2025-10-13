@@ -56,6 +56,7 @@
     stern
     kubectx
     kubectl
+    kubectl-cnpg
     docker-buildx
 
     # Google Cloud
