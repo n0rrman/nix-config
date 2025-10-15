@@ -11,6 +11,7 @@ return {
 		float = {
 			max_width = 0.5,
 			max_height = 0.9,
+			border = "rounded",
 		},
 	},
 	dependencies = { "nvim-tree/nvim-web-devicons" },
