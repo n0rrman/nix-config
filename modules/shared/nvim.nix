@@ -29,6 +29,7 @@
     sqls # For SQL language server
     graphql-language-service-cli # graphql
     nodePackages.graphql-language-service-cli # graphql
+    golangci-lint-langserver # Go
 
     # Linters
     eslint_d # eslint_d
@@ -39,7 +40,7 @@
     proselint # prose
     vale # vale
     nodePackages.jsonlint # jsonlint
-    golangci-lint  # Go 
+    golangci-lint # Go
 
     # Formatters
     nodePackages.prettier # prettier
