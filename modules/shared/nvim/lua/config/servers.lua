@@ -31,6 +31,7 @@ return {
 		make = { "checkmake" },
 		markdown = { "proselint" },
 		json = { "jsonlint" },
+		go = { "golangcilint" },
 	},
 
 	-- LSP --

@@ -39,9 +39,9 @@
     proselint # prose
     vale # vale
     nodePackages.jsonlint # jsonlint
+    golangci-lint  # Go 
 
     # Formatters
-    # nodePackages.prettier-plugin-toml
     nodePackages.prettier # prettier
     prettierd
     stylua # stylua
