@@ -48,7 +48,6 @@
     bitwarden-cli
     obsidian
     librewolf
-    brave
     onlyoffice-desktopeditors
     gparted
 
