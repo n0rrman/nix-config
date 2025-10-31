@@ -3,6 +3,9 @@
   homebrew = {
     enable = true;
     casks = [
+      # Terminal
+      "ghostty"
+
       # Social
       "messenger"
       "discord"
