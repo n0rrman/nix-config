@@ -42,5 +42,6 @@
     gnumake
     gcc
     postgresql
+    swift
   ];
 }

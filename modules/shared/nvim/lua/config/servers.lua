@@ -53,6 +53,7 @@ return {
 		"sqls", -- SQL/PostgreSQL
 		"templ", -- Go templating
 		"graphql", -- GraphQL
+		"sourcekit", -- Swift
 	},
 
 	-- TREESITTER --
@@ -83,5 +84,6 @@ return {
 		"graphql",
 		"regex",
 		"bash",
+		"swift",
 	},
 }
