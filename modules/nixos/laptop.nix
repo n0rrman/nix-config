@@ -20,7 +20,7 @@
     enable = true;
     extraPackages = with pkgs; [
       # Hardware acceleration
-      vaapiIntel
+      intel-vaapi-driver
 
       # Intel media driver
       intel-media-driver
