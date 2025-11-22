@@ -1,5 +1,6 @@
 { pkgs, inputs, ... }:
 {
+  nix.enable = false;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
