@@ -11,7 +11,7 @@ return {
 	},
 	build = "make tiktoken", -- Only on MacOS or Linux
 	opts = {
-		model = "claude-4-sonnet",
+		model = "claude-sonnet-4",
 		window = {
 			layout = "float",
 			width = 0.6,
