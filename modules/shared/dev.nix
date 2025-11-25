@@ -31,6 +31,7 @@
     jq
     tree-sitter
     trivy
+    sops
 
     # Languages
     luarocks
