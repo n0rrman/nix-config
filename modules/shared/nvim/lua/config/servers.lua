@@ -30,7 +30,6 @@ return {
 		python = { "flake8" },
 		make = { "checkmake" },
 		markdown = { "proselint" },
-		json = { "jsonlint" },
 	},
 
 	-- LSP --

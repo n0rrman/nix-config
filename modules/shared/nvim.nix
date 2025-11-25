@@ -39,7 +39,6 @@
     hadolint # hadolint
     proselint # prose
     vale # vale
-    nodePackages.jsonlint # jsonlint
     golangci-lint # Go
 
     # Formatters
