@@ -102,7 +102,6 @@ keymap("<leader>fv", telescope.git_status, "Telescope: Git status")
 keymap("<leader>fk", telescope.keymaps, "Telescope: Nvim keymaps")
 keymap("<leader>fs", telescope.grep_string, "Telescope: Selected word")
 keymap("<leader>fp", telescope.registers, "Telescope: Registers")
-keymap("<leader>fu", ":Telescope undo<CR>", "Telescope: Undo")
 keymap("<leader>fc", ":TodoTelescope undo<CR>", "Telescope: Comments (TODO)")
 
 -- LSP

@@ -6,7 +6,6 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-ui-select.nvim",
-		"debugloop/telescope-undo.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
