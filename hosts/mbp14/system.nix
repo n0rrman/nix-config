@@ -12,7 +12,6 @@
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
-    swift
     trash-cli
     colima
     inputs.agenix.packages.aarch64-darwin.default
