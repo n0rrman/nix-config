@@ -12,7 +12,7 @@
   };
 
   networking.firewall = {
-    enable = false;
+    enable = true;
     trustedInterfaces = [ "docker0" ];
     checkReversePath = false;
   };

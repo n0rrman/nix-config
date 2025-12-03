@@ -2,10 +2,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local is_minimal = vim.env.NVIM_MINIMAL == "1" or vim.env.SSH_CONNECTION ~= nil
-vim.g.nvim_profile = is_minimal and "minimal" or "full"
-vim.notify("Neovim profile: " .. vim.g.nvim_profile, vim.log.levels.INFO)
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -26,7 +22,7 @@ local spec = {
 	{ import = "plugins.core" },
 }
 
-if not is_minimal then
+if not Is_minimal then
 	table.insert(spec, { import = "plugins.full" })
 end
 
