@@ -12,6 +12,12 @@
 
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
+
+    dotfiles = {
+      url = "github:helvnor/dotfiles";
+      flake = false;
+    };
+
   };
 
   outputs =
@@ -20,6 +26,7 @@
       darwin,
       home-manager,
       agenix,
+      dotfiles,
       ...
     }@inputs:
 
