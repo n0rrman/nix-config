@@ -1,10 +1,10 @@
-{ pkgs, dotfiles, ... }:
+{ pkgs, inputs, ... }:
 {
-  home.file.".config/ghostty".source = dotfiles + "/ghostty";
-  home.file.".vimrc".source = dotfiles + "/vim/dot_vimrc";
-  home.file.".tmux.conf".source = dotfiles + "/tmux/dot_tmux.conf";
+  home.file.".config/ghostty".source = inputs.dotfiles + "/ghostty";
+  home.file.".vimrc".source = inputs.dotfiles + "/vim/dot_vimrc";
+  home.file.".tmux.conf".source = inputs.dotfiles + "/tmux/dot_tmux.conf";
   home.file.".config/fish" = {
-    source = dotfiles + "/fish";
+    source = inputs.dotfiles + "/fish";
     recursive = true;
   };
 

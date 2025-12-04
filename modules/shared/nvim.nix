@@ -1,7 +1,7 @@
-{ pkgs, dotfiles, ... }:
+{ pkgs, inputs, ... }:
 {
   home.file.".config/nvim" = {
-    source = dotfiles + "/nvim";
+    source = inputs.dotfiles + "/nvim";
     recursive = true;
   };
 
